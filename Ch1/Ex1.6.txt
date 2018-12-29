@@ -1,0 +1,8 @@
+Question: Explain whether the following code fragment is legal. If legal, what does it do, if not legal, fix it
+
+Code:
+std::cout << "The sum of " << v1;
+          << " and " << v2;
+          << " is " << v1 + v2 << std::endl;
+
+Answer: Code not legal, to fix remove the semicolons after v1 and v2 or add std::cout at the beginning of every line.
