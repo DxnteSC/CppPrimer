@@ -1,0 +1,13 @@
+Question: Indicate which, if any, of the following output statements are legal
+
+Code: 
+std::cout << "/*";
+std::cout << "*/";
+std::cout << /* "*/" */;
+std::cout << /*  "*/" /* "/*"  */;
+
+Answer:
+1 = Legal
+2 = Legal
+3 = Illegal
+4 = Legal
