@@ -1,0 +1,5 @@
+The difference between int, long, long long and short is the minimum bits guaranteed by the standard for each one.
+
+The difference between a signed and unsigned type is signed types can be positive or negative, whereas unsigned types can only be positive.
+
+The difference between floats and doubles is that doubles are more precise, and have a larger minimum size guaranteed by the standard.

@@ -1,0 +1,2 @@
+Principal and payment would be an unsigned int. They can't be negative and are whole numbers
+Rate would be a double as it's a percentage, so needs to be represented as a decimal number.

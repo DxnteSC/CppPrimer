@@ -1,0 +1,10 @@
+Question: What, if any, are the differences between the following definitions:
+
+Code:
+
+int month = 9, day = 7;
+int month = 09, day = 07;
+
+Answer:
+
+The second line causes an error as 9 is an invalid digit for an octal literal.

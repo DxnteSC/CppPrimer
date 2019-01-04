@@ -1,0 +1,18 @@
+Question:
+
+What values do these literals represent? What type does each have? 
+
+(a) "Who goes with F\145rgus?\012" 
+(b) 3.14e1L 
+(c) 1024f 
+(d) 3.14L
+
+Answer:
+
+(a) "Who goes with Fergus?\n" char array, string literal, contains two octal literals '\145' which represents e and '\012' which represents \n, the newline character.
+
+(b) '31.4', floating point literal, long double
+
+(c) '1024.0', floating point literal, float
+
+(d) '3.14', floating point literal, long double

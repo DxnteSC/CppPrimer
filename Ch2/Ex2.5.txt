@@ -1,0 +1,20 @@
+Question:
+Determine the type of each of the following literals. 
+Explain the differences among the literals in each of the four examples: 
+
+(a) 'a', L'a', "a", L"a" 
+(b) 10, 10u, 10L, 10uL, 012, 0xC 
+(c) 3.14, 3.14f, 3.14L 
+(d) 10, 10u, 10., 10e-2
+
+Answer:
+
+(a): character literal, char; wide character literal, wchar_t; string literal, char array; string literal, wchar_t array.
+
+(b): decimal literal, int; decimal literal, unsigned int; decimal literal, long; decimal literal, unsigned long; octal literal, int; hexadecimal literal, int.
+
+(c): floating point literal, double; floating point literal, float; floating point literal, long double.
+
+(d): integer literal, int; integer literal, unsigned int; floating point literal, double; floating point literal, double.
+
+
