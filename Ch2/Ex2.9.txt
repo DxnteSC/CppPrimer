@@ -1,0 +1,21 @@
+Question: Explain the following definitions. For those that are illegal, explain what’s wrong and how to correct it. 
+
+(a) std::cin >> int input_value; 
+(b) int i = { 3.14 }; 
+(c) double salary = wage = 9999.99; 
+(d) int i = 3.14;
+
+Answer:
+
+(a): Error. The variable needs to be defined before being used for inout, to fix;
+	int input_value;
+	std::cin >> input_value;
+
+(b): Error, narrowing conversion with list initialisation. Either initialise without the curly braces, or change the type to double. To fix;
+	int i = 3.14 or double i = {3.14}
+
+(c): Error, wage is an undeclared identifier. To fix;
+	double salary, wage;
+	salary = wage = 9999.99
+
+(d): Initialises i to 3, as int truncates the value. 
