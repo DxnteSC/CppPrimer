@@ -1,0 +1,21 @@
+Question: Which, if any, of the following assignments are invalid? If they are valid, explain what they do.
+
+Code: 
+
+int i = 0, &r1 = i; 
+double d = 0, &r2 = d; 
+
+(a) r2 = 3.14159; 
+(b) r2 = r1; 
+(c) i = r2; 
+(d) r1 = d;
+
+Answer:
+
+(a): valid, assigns 3.14159 to d.
+
+(b): valid, assigns d the value of i
+
+(c): valid, assigns the value d to i.
+
+(d): valid, assigns the value of d to i
