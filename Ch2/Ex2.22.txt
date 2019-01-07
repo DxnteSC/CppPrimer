@@ -1,0 +1,9 @@
+Question: Assuming p is a pointer to int, explain the following code: 
+(a) if (p) // ...
+(b) if (*p) // ...
+
+Answer:
+
+(a): evaluates to true, as p is not a nullptr.
+
+(b): evaluates to true if p points to any non-zero integer.

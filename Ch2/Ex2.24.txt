@@ -1,0 +1,7 @@
+Question: Why is the initialization of p legal but that of lp illegal?
+
+Code:
+
+int i = 42;    void *p = &i;     long *lp = &i;
+
+Answer: Void pointers can point to any type, can't assign a long pointer to type int.

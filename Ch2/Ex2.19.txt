@@ -1,0 +1,5 @@
+Question: Explain the key differences between pointers and references.
+
+Pointers are objects; they can be assigned and copied; the value a pointer points to can be changed; they do not have to be initialised when they are defined.
+
+References are an alternative name for an object, they are not objects; the value that a reference refers to cannot be changed; references must be initialised.

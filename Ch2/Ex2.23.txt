@@ -1,0 +1,4 @@
+Question: Given a pointer p, can you determine whether p points to a valid object? If so, how? If not, why not?
+
+Answer: No you cannot, as it would be expensive to maintain meta data about what constitutes a valid pointer and what doesn't. 
+

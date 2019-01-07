@@ -1,0 +1,15 @@
+Question: Explain each of the following definitions. Indicate whether any are illegal and, if so, why. 
+
+int i = 0; 
+
+(a) double* dp = &i; 
+(b) int *ip = i; 
+(c) int *p = &i;
+
+Answer:
+
+(a): illegal, pointers must must point to the same type.
+
+(b): illegal, pointers cannot be assigned to integer values, even if they are 0;
+
+(c): legal, p points to i;
