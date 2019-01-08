@@ -1,0 +1,20 @@
+Explain the following definitions. Identify any that are illegal. 
+
+(a) int i, *const cp; 
+(b) int *p1, *const p2; 
+(c) const int ic, &r = ic; 
+(d) const int *const p3;
+(e) const int *p;
+
+
+Answer:
+
+(a): illegal, i is an int, cp is a const pointer to an int which isn't initialised.
+
+(b): illegal, p1 is a pointer to an int, p2 is a const pointer which isn't initialised.
+
+(c): illegal, ic is a const int which is not initialised, r is a reference to a const int, ic.
+
+(d): illegal, p3 is a const pointer to a const int which is not initialised. 
+
+(e): legal, p is a pointer to a const int.

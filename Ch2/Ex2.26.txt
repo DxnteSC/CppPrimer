@@ -1,0 +1,16 @@
+Question: Which of the following are legal? For those that are illegal, explain why. 
+
+(a) const int buf;
+(b) int cnt = 0; 
+(c) const int sz = cnt; 
+(d) ++cnt; ++sz;
+
+AnsweR:
+
+(a): illegal, const object must be initialised.
+
+(b): legal.
+
+(c): legal.
+
+(d): ++cnt is legal, ++sz is illegal as const objects cannot be changed.

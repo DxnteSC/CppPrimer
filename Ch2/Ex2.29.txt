@@ -1,0 +1,17 @@
+Question: Uing the variables in the previous exercise, which of the following assignments are legal? Explain why. 
+
+(a) i = ic; 
+(b) p1 = p3; 
+(c) p1 = &ic; 
+(d) p3 = &ic; 
+(e) p2 = p1; 
+(f) ic = *p3;
+
+Answer: 
+
+(a): legal, int can be initialised with value of ic.
+(b): illegal, non-const pointer to an int trying to be assigned to a const pointer to a const int
+(c): illegal, pointer to a non-const int attempting to point to a const int
+(d): illegal, cannot change value of a const object
+(e): illegal, cannot change value of a const object
+(f): illegal, cannot change value

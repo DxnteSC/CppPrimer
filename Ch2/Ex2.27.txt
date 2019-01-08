@@ -1,0 +1,25 @@
+Question: Which of the following initializations are legal? Explain why. 
+
+(a) int i = -1, &r = 0; 
+(b) int *const p2 = &i2; 
+(c) const int i = -1, &r = 0; 
+(d) const int *const p3 = &i2; 
+(e) const int *p1 = &i2; 
+(f) const int &const r2; 
+(g) const int i2 = i, &r = i;
+
+Answer:
+
+(a): illegal, non-const references cannot be initialised to literals.
+
+(b): legal, p2 is a const pointer to type int.
+
+(c): legal, const references can be assigned to literals.
+
+(d): legal, p3 is a const pointer to a const int;
+
+(e): legal, p1 is a pointer to a const int.
+
+(f): illegal, const references need to be initialised.
+
+(g): legal, i2 is a const int initialised to i, r is a reference to a const int.

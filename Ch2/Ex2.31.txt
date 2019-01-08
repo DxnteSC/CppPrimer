@@ -1,0 +1,21 @@
+Question: Given the declarations in the previous exercise determine whether the following assignments are legal. Explain how the top-level or low-level const applies in each case.
+
+Code: 
+
+(a) r1 = v2;
+(b) p1 = p2;    
+(c) p2 = p1;
+(d) p1 = p3;    
+(e) p2 = p3;
+
+Answer:
+
+(a): legal, r1 is not const.
+
+(b): illegal, p2 has low-level const, p1 does not.
+
+(c): legal, can convert const int to int so can convert pointer to const int to a pointer to an int
+
+(d): illegal, p3 has low-level const, p1 does not.
+
+(e): legal, have the same low-level const 
