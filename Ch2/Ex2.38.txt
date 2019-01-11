@@ -1,0 +1,28 @@
+Question: Describe the differences in type deduction between decltype and auto. Give an example of an expression where auto and decltype will deduce the same type and an example where they will deduce differing types.
+
+Answer:
+
+auto will ignore top-level const qualifier and reference.
+decltype will include top-level const qualifier and reference.
+
+Example of auto and decltype deducing the same type:
+
+int i = 0;
+auto a = i; // int
+decltype(i) b; // int
+
+Example of auto and decltype deducing different types:
+
+int x = 0, &y = x;
+
+auto c = x; // int
+decltype((x)) d; // int&
+
+auto e = y; // int
+decltype(y) f; // int&
+
+const int z = 0;
+
+auto g = z // int
+decltype(z) h = 0 // const int
+

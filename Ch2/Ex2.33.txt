@@ -1,0 +1,41 @@
+Question: Using the variable definitions from this section, determine what happens in each of these assignments:
+
+Code:
+
+int main()
+{
+    int i = 0, &r = i;
+    auto a = r;
+    
+    const int ci = i, &cr = ci;
+    auto b = ci;
+    auto c = cr;
+    auto d = &i;
+    auto e = &ci;
+    auto &g = ci;
+}
+
+Assignments:
+
+a = 42;   b = 42;   c = 42;
+d = 42;   e = 42;   g = 42;
+
+Answer:
+
+(a): 42 assigned to value of a.
+
+(b): 42 assigned to value of b.
+
+(c): 42 assigned to value of c.
+
+(d): Error, can't set value of int* to a literal.
+
+(e): Error, can't set value of const int* to literal.
+
+(g): Error, cannot change value of const
+
+
+
+
+
+
