@@ -16,7 +16,6 @@ int main()
             else
             {
                 std::cout << item1 << std::endl;
-                item1 = item2;
             }
         }
         std::cout << item1 << std::endl;
