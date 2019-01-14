@@ -26,12 +26,9 @@ int main()
             {
                 x.units_sold += y.units_sold;
                 x.revenue += y.revenue;
-            }
-            else
-            {
                 x.avg = x.revenue / x.units_sold;
-                std::cout << "ISBN: " << x.bookNo << " Units Sold: " << x.units_sold << " Total Revenue: " << x.revenue << " Avg Price: " << x.avg << std::endl;
             }
         }
+        std::cout << "ISBN: " << x.bookNo << " Units Sold: " << x.units_sold << " Total Revenue: " << x.revenue << " Avg Price: " << x.avg << std::endl;
     }
 }
