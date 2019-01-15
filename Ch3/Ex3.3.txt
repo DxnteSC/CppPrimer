@@ -1,0 +1,2 @@
+For string input, whitespace is treated as the end of one string and the beginning of another, even on the same line.
+For getline input, everything on the line is considered as one string.
