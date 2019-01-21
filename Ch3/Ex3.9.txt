@@ -1,0 +1,6 @@
+Question: What does the following program do? Is it valid? If not, why not? 
+
+string s;
+cout << s[0] << endl;
+
+Answer: Prints the first character of string, technically valid since prints empty string.
