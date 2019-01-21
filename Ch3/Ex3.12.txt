@@ -1,0 +1,11 @@
+Question: Which, if any, of the following vector definitions are in error? For those that are legal, explain what the definition does. For those that are not legal, explain why they are illegal. 
+
+(a) vector<vector<int>> ivec; 
+(b) vector<string> svec = ivec; 
+(c) vector<string> svec(10, "null");
+
+Answer:
+
+(a): legal, creates an empty vector of element type vector which contains ints.
+(b): illegal, copy initialisation for vectors need to be of the same type.
+(c): legal, creates a vector which contains 10 strings which all say "null".
