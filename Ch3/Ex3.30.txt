@@ -1,0 +1,12 @@
+Question: Identify the indexing errors in the following code:
+
+Code:
+
+constexpr size_t array_size = 10;
+int ia[array_size];
+for (size_t ix = 1; ix <= array_size; ++ix)
+      ia[ix] = ix;
+
+Answer:
+
+ix reaches value 10, but an index of 10 is out of range.

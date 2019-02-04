@@ -1,0 +1,4 @@
+Question: What would happen if we did not initialize the scores array in the program on page 116?
+
+Answer:
+If scores declared outside of a function, the values would be default initialised to 0, if scores declared inside a function, the values are undefined.

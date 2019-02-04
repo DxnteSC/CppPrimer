@@ -1,0 +1,3 @@
+The size of the array needs to be known at compile-time. 
+Arrays have a fixed size, therefore elements past that size can't be added.
+Need to remember to leave space for the null character at the end of character arrays. 

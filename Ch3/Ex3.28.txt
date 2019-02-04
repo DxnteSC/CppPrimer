@@ -1,0 +1,15 @@
+Question: What are the values in the following arrays? 
+
+string sa[10]; (a)
+int ia[10]; (b)
+int main() {
+    string sa2[10]; (c)
+    int    ia2[10]; (d)
+}
+
+Answers: 
+
+(a): ten elements of empty strings
+(b): ten elements of 0
+(c): ten elements of empty strings
+(d): ten elements with undefined values
