@@ -1,0 +1,5 @@
+Question: Given that p1 and p2 point to elements in the same array, what does the following code do? Are there values of p1 or p2 that make this code illegal? 
+
+p1 += p2 - p1;
+
+Answer: The code makes p1 point to p2. There are no values of either which makes the code illegal.
