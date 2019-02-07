@@ -1,0 +1,14 @@
+Question: What does the following program do?
+
+Code: 
+
+const char ca[] = {'h', 'e', 'l', 'l', 'o'};
+const char *cp = ca;
+while (*cp) {
+    cout << *cp << endl;
+    ++cp;
+}
+
+Answer:
+
+Loops through the array of ca (hello) and prints out each value. Program acts undefined, however, as the array ca isn't null terminated so the program will continue to print out characters until a null character is reached.
