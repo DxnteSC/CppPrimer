@@ -1,0 +1,10 @@
+Question: Using Table 4.12 (p. 166), parenthesize the following expressions to indicate the order in which the operands are grouped:
+
+(a) * vec.begin() 
+(b) * vec.begin() + 1
+
+Answer:
+
+(a): *((vec.begin)()) - member selector, function call, dereference
+(b): (*(vec.begin)()) + 1 - member selector, function call, dereference, addition
+ 

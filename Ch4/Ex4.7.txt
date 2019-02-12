@@ -1,0 +1,7 @@
+Question: What does overflow mean? Show three expressions that will overflow.
+
+Answer: Overflow is what happens when a computer cannot represent a number due to not having enough bits, so the bits continue to wrap around. The behaviour of overflow is undefined. Examples are:
+
+int i = 12345431234 - changes to -539470654
+int j = -123213322322 - changes to 1340729262
+int k = 6543456543234543 - changes to 853334511
