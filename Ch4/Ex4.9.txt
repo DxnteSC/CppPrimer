@@ -1,0 +1,8 @@
+Question: Explain the behaviour of the condition in the following if statement:
+
+Code:
+
+const char *cp = "Hello World";
+if (cp && *cp)
+
+Answer: cp is evaluated as the bool true, as it is a non-zero pointer, *cp is evaluated as the bool true as it is a non-empty string so the condition evaluates as true.

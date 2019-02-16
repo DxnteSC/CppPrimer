@@ -1,0 +1,9 @@
+Question: Explain when operands are evaluated in the logical AND, logical OR, and equality operators.
+
+Answer: 
+
+Logical AND operator: the left operand is always evaluated, the right operand is only evaluated if the left operand is true.
+
+Logical OR operator: the left operand is always evaluated, the right operand is only evaluated if the left operand is false.
+
+Equality operators: both operands of the equality operators are always evaluated.
