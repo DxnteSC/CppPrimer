@@ -1,0 +1,9 @@
+Question: Explain what happens in each of the if tests: 
+
+(a) if (42 = i)   //  ...
+(b) if (i = 42)   //  ...
+
+Answer:
+
+(a): error as assignment is invalid.
+(b): i is assigned the value of 42, as 42 is not zero, the condition is true and the conditional executes.

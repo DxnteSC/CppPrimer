@@ -1,0 +1,8 @@
+Question: The following assignment is illegal. Why? How would you correct it?
+
+Code:
+
+double dval; int ival; int *pi;
+dval = ival = pi = 0;
+
+Answer: There is no conversion between int* and int, therefore ival cannot be assigned a value. To fix it change it to dval = ival = 0 and pi = 0.

@@ -1,0 +1,10 @@
+Question: Although the following are legal, they probably do not behave as the programmer expects. Why? Rewrite the expressions as you think they should be. 
+
+(a) if (p = getPtr() != 0) 
+(b) if (i = 1024)
+
+Answer:
+
+(a): As assignment is low precedence, getPtr() and 0 are compared first and then p is assigned the bool value of that, rather than p being given the value of getPtr() and then being compared to 0. Rewrite as ((p = getPtr()) != 0).
+
+(b): Assigns i the value of 1024 and then evaluates the condition as true as 1024 is not 0, rather than testing if i is equal to 1024. Rewrite as (i == 1024).
