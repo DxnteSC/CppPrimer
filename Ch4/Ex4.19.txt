@@ -1,0 +1,13 @@
+Question: Given that ptr points to an int, that vec is a vector<int>, and that ival is an int, explain the behaviour of each of these expressions. Which, if any, are likely to be incorrect? Why? How might each be corrected? 
+
+(a) ptr != 0 && *ptr++ 
+(b) ival++ && ival 
+(c) vec[ival++] <= vec[ival]
+
+Answer:
+
+(a): Checks if ptr is not a null pointer, then ptr points to whatever is next in memory and returns a copy of the original value it pointer to. As we don't know what's next in memory, can be an error. Rewrite as ptr != 0 && (*ptr)++
+
+(b) Increases the value of ival and returns a copy of the original value, then if the original value is non-zero, evaluates the right which has been incremented, if it is also non-zero then returns true, else it returns false.
+
+(c): Behaviour of <= is undefined. Rewrite as ++ival, v[ival] <= v[ival + 1]

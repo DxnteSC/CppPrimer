@@ -1,0 +1,5 @@
+Question: What would happen if the while loop on page 148 that prints the elements from a vector used the prefix increment operator?
+
+Answer:
+
+The incremented value would be dereferenced, this would mean the first value would be skipped, the loop would check one after the null char of the list, and if there were no negative values, the loop would continue going until it hit a negative value in memory.

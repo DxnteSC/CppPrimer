@@ -1,0 +1,6 @@
+Question: Explain the difference between prefix and postfix increment.
+
+Answer: 
+
+Prefix increment increase the original value and returns the incremented value. Postfix increment increase the original value and returns a copy of the unchanged value. 
+ 
