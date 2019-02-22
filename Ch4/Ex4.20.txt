@@ -1,0 +1,22 @@
+Question: Assuming that iter is a vector<string>::iterator, indicate which, if any, of the following expressions are legal. Explain the behaviour of the legal expressions and why those that aren’t legal are in error. 
+
+(a) *iter++; 
+(b) (*iter)++; 
+(c) *iter.empty() 
+(d) iter->empty(); 
+(e) ++*iter; 
+(f) iter++->empty();
+
+Answer:
+
+(a): Legal, increments tier value by 1, returns a copy of iter's original value and then deferences that copy.
+
+(b): Illegal, iter points to a string and ++ has no meaning for strings.
+
+(c): Illegal, dot operator has higher precedence than dereference so attempts to run empty on the iterator, which has no member named empty, rather than than the position it points to and then deference that value.
+
+(d): Legal, runs the empty member on the value iter refers to.
+
+(e): Illegal, deferences iter and then increments it, but can't increment string value.
+
+(f): Legal, increments iter, returns a copy of it's original value and then runs the empty member on the copy.
