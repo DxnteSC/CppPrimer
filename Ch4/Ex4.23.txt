@@ -1,0 +1,10 @@
+Question: The following expression fails to compile due to operator precedence. Using Table 4.12 (p. 166), explain why it fails. How would you fix it?
+
+Code:
+
+string s = "word";
+string pl = s + s[s.size() - 1] == 's' ? "" : "s" ;
+
+Answer:
+
+Conditional operator has lower precedence than addition, to fix parenthesis the conditional operator.
