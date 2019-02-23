@@ -1,0 +1,3 @@
+Question: In our grading example in this section, what would happen if we used unsigned int as the type for quiz1?
+
+Answer: It would cause an error as there would not be enough bits in an unsigned int. 
