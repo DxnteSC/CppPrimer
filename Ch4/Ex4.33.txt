@@ -1,0 +1,10 @@
+Question: Using Table 4.12 (p. 166) explain what the following expression does:
+
+Code:
+
+someValue ? ++x, ++y : --x, --y
+
+Answer:
+
+Equivalent to (someValue ? ++x, ++y : --x), --y
+Evaluate someValue, if it is true increment x and y and then decrement y, if it is false decrement x and then decrement y. Therefore y is always decremented.

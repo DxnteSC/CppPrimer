@@ -1,0 +1,13 @@
+Question: Explain the following loop.
+
+Code:
+
+constexpr int size = 5;
+int ia[size] = {1,2,3,4,5};
+for (int *ptr = ia, ix = 0;
+     ix != size && ptr != ia+size;
+     ++ix, ++ptr)   { /* ...   */ }
+
+Answer:
+
+While ptr and ix are not pointing to the the end of ia, increment both of them and execute the loop
