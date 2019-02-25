@@ -1,0 +1,11 @@
+Question: Given the variable definitions in this section, explain what conversions take place in the following expressions: 
+
+(a) if (fval) 
+(b) dval = fval + ival; 
+(c) dval + ival * cval;
+
+Answer:
+
+(a): fval is converted to a bool, false if fval is 0 and true if fval is non-zero.
+(b): ival is converted to a float, then the result of fval and ival are converted to a double.
+(c): cval is converted to an int, and then the result of ival * cval is converted to a double.

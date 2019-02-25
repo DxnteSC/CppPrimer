@@ -1,0 +1,20 @@
+Question: Given the following definitions, identify the implicit type conversions, if any, taking place: 
+
+(a) cval = 'a' + 3; 
+(b) fval = ui - ival * 1.0; 
+(c) dval = ui * fval; 
+(d) cval = ival + fval + dval;
+
+Code: 
+char cval;     
+int ival;    
+unsigned int ui;
+float fval;   
+double dval;
+
+Answer:
+
+(a): 'a' converted to an int, then added to 3, and then the value is converted back to a char.
+(b): ival converted to a float, multiplied by 1.0, then the result is converted to an unsigned int, and subtracted from ui and then that result is converted to a float.
+(c): depends on size of float and unsigned int but the value is converted to a double.
+(d): ival converted to a float, and added to value of fval, the result is converted to a double and added to the value of dval, the result is then converted to a char.

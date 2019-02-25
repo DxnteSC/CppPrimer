@@ -1,0 +1,7 @@
+Question: Explain the following expression: 
+
+double slope = static_cast<double>(j/i);
+
+Answer:
+
+The result of j/i is converted to a double and then assigned to slope.
