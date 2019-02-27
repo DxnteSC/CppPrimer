@@ -6,11 +6,14 @@ Question: Explain each of the following examples, and correct any problems you d
 
 Answer:
 
-(a): while you haven't reached the end of the string, execute the loop
-(b): Error as status is defined in control structure, should be:
+(a): While you haven't reached the end of the string, execute the loop
+
+string::iterator iter = s.begin();
+while (string::iterator iter != s.end()) { /* . . . */ }
+
+(b): Checks to see if a word can be found, while it can be found execute the while statement, when the word can't be found, execute the if statement.
 
 bool status;
 while (status = find(word)) { /* . . . */ }
 if (!status) { /* . . . */ }
 
-Checks to see if a word can be found, while it can be found execute the while statement, when the word can't be found, execute the if statement.
