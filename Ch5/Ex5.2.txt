@@ -1,0 +1,3 @@
+Question: What is a block? When might you might use a block?
+
+Answer: A block is a sequence of statements surrounded by {}, they are used when more than one statement is needed in a place where the language requires only one statement.

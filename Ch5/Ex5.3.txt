@@ -1,0 +1,15 @@
+Question: Use the comma operator (§ 4.10, p. 157) to rewrite the while loop from § 1.4.1 (p. 11) so that it no longer requires a block. Explain whether this rewrite improves or diminishes the readability of this code.
+
+Code:
+
+while (val <= 10) {
+    sum += val;  // assigns sum + val to sum
+    ++val;       // add 1 to val
+}
+
+Answer:
+
+while (val <= 10)
+	sum += val, ++val;
+
+Diminishes the readability of the code as the sequence of operations is less clear.
