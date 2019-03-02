@@ -1,0 +1,1 @@
+A dangling else is when there are more if statements than else statements. In C++, else clauses are resolved with the closest unmatched if. 
