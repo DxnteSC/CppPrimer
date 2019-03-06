@@ -1,0 +1,8 @@
+Question: Each of the programs in the highlighted text on page 184 contains a common programming error. Identify and correct each error.
+
+Answer:
+
+(a): no break cases
+(b): control bypasses an explicitly initialised variable
+(c): need case labels to be integral constant expressions, separated by colons, for each variables, i.e. case 1: case 3
+(d): case labels must be const, so const unsigned ival...
