@@ -1,0 +1,5 @@
+Question: The while loop is particularly good at executing while some condition holds; for example, when we need to read values until end-of-file. The for loop is generally thought of as a step loop: An index steps through a range of values in a collection. Write an idiomatic use of each loop and then rewrite each using the other loop construct.
+
+Answer:
+
+I would choose a for loop as it can do anything a while loop can do, whilst a while loop can not necessarily do everything a for loop can 

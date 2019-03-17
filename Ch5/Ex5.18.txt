@@ -1,0 +1,26 @@
+Question: Explain each of the following loops. Correct any problems you detect.
+
+Code: 
+
+(a) do
+    	int v1, v2;
+    	cout << "Please enter two numbers to sum:" ;
+    	if (cin >> v1 >> v2)
+        	cout << "Sum is: " << v1 + v2 << endl;
+    while (cin); 
+
+(b) do {
+    	// . . .
+    } while (int ival = get_response());
+
+(c) do {
+    	int ival = get_response();
+    } while (ival);
+
+Answer: 
+
+(a): sums two numbers while there is input, need {} around the statements in the do condition.
+
+(b): declaration done in do condition not allowed.
+
+(c): infinite loop as a new condition is defined every loop.

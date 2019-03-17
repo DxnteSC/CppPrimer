@@ -1,0 +1,19 @@
+Question: Explain each of the following loops. Correct any problems you detect.
+
+Code: 
+
+(a) for (int ix = 0; ix != sz; ++ix)  { /* . . . */ }
+    if (ix != sz)
+
+(b) int ix;
+    for (ix != sz; ++ix) { /* . . . */ } 
+
+(c) for (int ix = 0; ix != sz; ++ix, ++ sz)  { /* . . . */ }
+
+Answer:
+
+(a): While ix doesn't equal sz, execute the loop, as ix is defined in the for-loops init statement, it cannot be used in the if statement afterwards, therefore to fix, define ix outside of the for loop. 
+
+(b): Same as a, but there is no init statement, therefore, to fix add a semicolon before ix != sz.
+
+(c): Same as a, loop will never terminate as assuming sz is not 0 when ix is initialised, ix will always not be equal to sz.
