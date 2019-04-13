@@ -1,0 +1,15 @@
+Question: The last example in this section that jumped back to begin could be better written using a loop. Rewrite the code to eliminate the goto.
+
+Code: begin:
+    int sz = get_size();
+    if (sz <= 0) {
+          goto begin;
+    }
+
+Answer: for (int i = get_size(); i <= 0;;) {
+		i = get_size();
+
+	int i = get_size();
+	while (i <= 0) {
+		i = get_size();
+
