@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void factorial() {
+void factorial2() {
     int x, currVal = 1;
     cout << "Enter a number: " << endl;
     cin >> x;
@@ -13,5 +13,5 @@ void factorial() {
 }
 
 int main() {
-    factorial();
+    factorial2();
 }
