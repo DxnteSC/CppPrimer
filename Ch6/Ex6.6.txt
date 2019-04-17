@@ -1,0 +1,3 @@
+Question: Explain the differences between a parameter, a local variable, and a local static variable. Give an example of a function in which each might be useful.
+
+Answer: A parameter is an automatic object, i.e. storage is allocated when the function is called and they are destroyed when the function is terminated. Local variables are created when the function passes through its definition and is destroyed when the block it is in is exited. A local static variable is created before the first time it is defined and is destroyed when the program terminates.
