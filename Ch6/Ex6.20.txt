@@ -1,0 +1,3 @@
+Question: When should reference parameters be references to const? What happens if we make a parameter a plain reference when it could be a reference to const?
+
+Answer: reference parameters should be references to const when the argument being passed into the parameter does not need to be changed, if we make a parameter a plain reference when it could be a reference to const, it unnecessarily limits what arguments can be passed as parameters. 

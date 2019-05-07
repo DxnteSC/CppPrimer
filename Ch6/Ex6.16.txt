@@ -1,0 +1,9 @@
+Question: The following function, although legal, is less useful than it might be. Identify and correct the limitation on this function:
+
+Code:
+bool is_empty(string& s) { return s.empty(); }
+
+Answer:
+As the parameter of bool is empty is a non-const string, string literals and const strings cannot be passed as arguments, only string objects.
+
+To correct the limitations, make string &s const.
