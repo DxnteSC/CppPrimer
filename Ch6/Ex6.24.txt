@@ -1,0 +1,14 @@
+Question: Explain the behavior of the following function. If there are problems in the code, explain what they are and how you might fix them.
+
+Code: 
+void print(const int ia[10])
+{
+    for (size_t i = 0; i != 10; ++i)
+        cout << ia[i] << endl;
+}
+
+Answer:
+
+The function loops through an array and prints the values, but as the size of ia is ignored, the function can take an array of any size. This means that the for loop may result in an index out-of-range error, or if the array is bigger than 10, stop at the tenth value.
+
+To fix, change int ia[10] to (&ia)[10]
