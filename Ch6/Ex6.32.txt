@@ -1,0 +1,11 @@
+Question: Indicate whether the following function is legal. If so, explain what it does; if not, correct any errors and then explain it.
+
+Code: int &get(int *arry, int index) { return arry[index]; }
+int main() {
+    int ia[10];
+    for (int i = 0; i != 10; ++i)
+        get(ia, i) = i;
+}
+
+Answer:
+Legal function takes an array and an index and returns the value at that index in the array. It is then used in main to assign the value of i to the array index at position i.

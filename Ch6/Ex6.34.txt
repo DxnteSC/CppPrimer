@@ -1,0 +1,3 @@
+Question: What would happen if the stopping condition in factorial were if (val != 0)
+
+Answer: Val could be negative, in which case the function would never terminate.

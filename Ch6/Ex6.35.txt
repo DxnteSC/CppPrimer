@@ -1,0 +1,3 @@
+Question: In the call to factorial, why did we pass val - 1 rather than val--?
+
+Answer: error to use increment operations and the value being changed as the order to which goes first is undefined.
