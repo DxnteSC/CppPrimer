@@ -1,0 +1,16 @@
+Question: Explain the effect of the second declaration in each one of the following sets of declarations. Indicate which, if any, are illegal. 
+
+(a)     int calc(int, int);
+	int calc(const int, const int); 
+
+(b)     int get();
+	double get(); 
+
+(c)     int *reset(int *);
+	double *reset(double *);
+
+Anser:
+
+(a): Illegal, top-level const are ignored, therefore functions are the same
+(b): Illegal, same name but different return type is not enough to distinguish.
+(c) Legal, first one is used for pointers to ints, second one is used for pointers to doubles.
