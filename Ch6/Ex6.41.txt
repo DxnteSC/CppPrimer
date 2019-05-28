@@ -1,0 +1,16 @@
+Question: Which, if any, of the following calls are illegal? Why? Which, if any, are legal but unlikely to match the programmer’s intent? Why?
+
+Code: 
+
+char *init(int ht, int wd = 80, char bckgrnd = ' '); 
+(a) init(); 
+(b) init(24,10); 
+(c) init(14, '*');
+
+Answer:
+
+(a): Illegal, ht has no default argument passed therefore function can't be called without passing a value too ht.
+
+(b): Legal
+
+(c): Legal, but unlikely to match programmer's intent, '*' can be converted to an int, therefore value is passed to wd instead of being passed to bckgrnd which is more likely to be the intent. 
