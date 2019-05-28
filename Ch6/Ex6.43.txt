@@ -1,0 +1,10 @@
+Question: Which one of the following declarations and definitions would you put in a header? In a source file? Explain why. 
+
+(a) inline bool eq(const BigInt&, const BigInt&) {...} 
+(b) void putValues(int *arr, int size);
+
+Answer:
+
+(a): declaration and definition should go in a header file, as inline functions can be defined multiple times.
+
+(b): declaration goes in a header file, definition can go in source file.
