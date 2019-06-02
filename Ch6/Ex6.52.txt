@@ -1,0 +1,14 @@
+Question: Given the following declarations, 
+
+void manip(int, int);
+double dobj; 
+
+what is the rank of each conversion in the following calls? 
+
+(a) manip('a', 'z'); 
+(b) manip(55.4, dobj);
+
+Answer: 
+
+(a): 3, match through a promotion
+(b): 4, maths through an arithmetic conversion 

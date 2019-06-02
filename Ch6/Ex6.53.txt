@@ -1,0 +1,17 @@
+Question: Explain the effect of the second declaration in each one of the following sets of declarations. Indicate which, if any, are illegal. 
+
+(a) 	int calc(int&, int&); 
+	int calc(const int&, const int&); 
+(b) 	int calc(char*, char*); 
+	int calc(const char*, const char*);
+(c) 	int calc(char*, char*); 
+	int calc(char* const, char* const);
+
+Answer:
+
+(a): second declaration takes references to const ints. 
+
+(b): second declaration takes pointers to const chars.
+
+(c): illegal, top level const is ignored, so function declarations are the same.
+
