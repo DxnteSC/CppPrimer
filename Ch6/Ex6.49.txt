@@ -1,0 +1,3 @@
+Question: What is a candidate function? What is a viable function?
+
+Answer: Candidate functions are functions which have the same name as the functioned call. Viable functions are functions which match the number of parameters of the called function and have types that match or are convertible. 

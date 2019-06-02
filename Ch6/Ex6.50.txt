@@ -1,0 +1,19 @@
+Question: Given the declarations for f from page 242, list the viable functions, if any for each of the following calls. Indicate which function is the best match, or if the call is illegal whether there is no match or why the call is ambiguous. 
+
+(a) f(2.56, 42) 
+(b) f(42) 
+(c) f(42, 0) 
+(d) f(2.56, 3.14)
+
+Declarations of f: 
+1. void f();
+2. void f(int);
+3. void f(int, int);
+4. void f(double, double = 3.14);
+
+Answer:
+
+(a): Viable functions: 3 and 4. Illegal, ambiguous call.
+(b): Viable functions: 2 and 4. Best match is 2.
+(c): Viable functions: 3 and 4. Best match is 3.
+(d): Viable functions: 3 and 4. Best match is 4.
