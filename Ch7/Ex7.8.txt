@@ -1,0 +1,3 @@
+Question: Why does read define its Sales_data parameter as a plain reference and print define its parameter as a reference to const?
+
+Answer: Read needs to write to the object, whereas print does not.
