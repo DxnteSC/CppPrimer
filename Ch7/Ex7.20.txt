@@ -1,0 +1,6 @@
+Question: When are friends useful? Discuss the pros and cons of using friends.
+
+Answer: Friends are useful when interface code need access to a classes private members. 
+
+Pros: control over interface design
+Cons: more writing

@@ -1,0 +1,3 @@
+Question: What is encapsulation? Why is it useful?
+
+Answer: Encapsulation is the separation of the classes interface and implementation. It is useful as it stops users from accidentally or purposefully messing with class implementations.

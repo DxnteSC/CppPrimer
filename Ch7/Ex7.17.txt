@@ -1,0 +1,3 @@
+Question: What, if any, are the differences between using class or struct?
+
+Answer: Difference is the default access level, structs default access level is public, classes default access level is private.
