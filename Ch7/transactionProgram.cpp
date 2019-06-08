@@ -2,17 +2,17 @@
 
 int main() {
     
-    Sales_data total;
-    double price;
-    if (read(std::cin,total)) {
-        Sales_data trans;
-        while (read(std::cin,trans)) {
+    Sales_data total(std::cin);
+    if (std::cin) {
+        Sales_data trans(std::cin);
+        while (std::cin) {
             if (total.isbn() == trans.isbn()) {
                 total.combine(trans);
             } else {
                 print(std::cout, total) << std::endl;
                 total = trans;
             }
+            read(std::cin, trans);
         }
         print(std::cout, total) << std::endl;
     } else {
