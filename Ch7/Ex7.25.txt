@@ -1,0 +1,3 @@
+Question: Can Screen safely rely on the default versions of copy and assignment? If so, why? If not, why not?
+
+Answer: Yes as all members are built in types/strings so can rely on the default copy and assignment operators.

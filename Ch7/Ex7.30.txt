@@ -1,0 +1,9 @@
+Question: It is legal but redundant to refer to members through the this pointer. Discuss the pros and cons of explicitly using the this pointer to access members.
+
+Answer: 
+
+Pros:
+It is clearer using this to refer members.
+
+Cons:
+The code looks redundant.

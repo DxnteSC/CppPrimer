@@ -1,0 +1,3 @@
+Question: What would happen in the previous exercise if the return type of move, set, and display was Screen rather than Screen&?
+
+Answer: The functions would use copies of the Screen, which means that the changes to screen wouldn't happen so the display isn't changed.
