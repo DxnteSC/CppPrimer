@@ -1,0 +1,10 @@
+What would happen if we gave Screen a size member defined as follows? Fix any problems you identify.
+
+Code:
+
+pos Screen::size() const
+{
+    return height * width;
+}
+
+Error occurs as pos is seen before we enter Screen's scope, to fix use Screen::pos.

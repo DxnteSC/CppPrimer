@@ -1,0 +1,3 @@
+Question: What would happen if we put the typedef of pos in the Screen class on page 285 as the last line in the class?
+
+Answer: Each use of pos before the typedef would be an error, as they would lack a declaration.
