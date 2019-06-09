@@ -2,11 +2,18 @@
 #define SCREEN_H
 
 #include <string>
+#include <vector>
 #include <iostream>
+#include "Window_mgr.h"
 
 class Screen {
 public:
     typedef std::string::size_type pos;
+    typedef std::vector<Screen>::size_type ScreenIndex;
+    
+public:
+    friend class Window_mgr;
+    friend void Window_mgr::clear(ScreenIndex);
 
 public:
     Screen() = default;
@@ -35,6 +42,5 @@ private:
         os << contents;
     }
 };
-
 
 #endif

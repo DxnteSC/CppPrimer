@@ -30,3 +30,4 @@ const Screen& Screen::display(std::ostream& os) const {
     do_display(os);
     return *this;
 }
+
