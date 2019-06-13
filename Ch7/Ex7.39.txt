@@ -1,0 +1,3 @@
+Question: Would it be legal for both the constructor that takes a string and the one that takes an istream& to have default arguments? If not, why not?
+
+Answer: No it would not be legal, as the compiler would be not be able to choose which default constructor to use.

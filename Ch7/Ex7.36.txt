@@ -1,0 +1,12 @@
+Question: The following initializer is in error. Identify and fix the problem.
+
+Code: 
+
+struct X {
+	X (int i, int j): base(i), rem(base % j) { }
+	int rem, base;
+};
+
+Answer: rem is initialised before base, therefore rem is undefined as base is not initialised yet. To fix the constructor:
+
+X(int i, int j): base(i), rem(i % j) {}
