@@ -1,0 +1,3 @@
+Question: Is the following declaration legal? If not, why not? vector<NoDefault> vec(10);
+
+Answer: Declaration is not legal as there is no default constructor for NoDefault, therefore the ten values in vec are undefined. 

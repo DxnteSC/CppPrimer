@@ -1,0 +1,3 @@
+Question: What if we defined the vector in the previous exercise to hold objects of type C?
+
+Answer: The code would be legal, vec would be initialised with 10 values of 0.
