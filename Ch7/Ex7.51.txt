@@ -1,0 +1,3 @@
+Question: Why do you think vector defines its single-argument constructor as explicit, but string does not?
+
+Answer: Technically, a const char* is the same as a string whereas a number is different from a vector.

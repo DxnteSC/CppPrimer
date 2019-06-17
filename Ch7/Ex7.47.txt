@@ -1,0 +1,3 @@
+Question: Explain whether the Sales_data constructor that takes a string should be explicit. What are the benefits of making the constructor explicit? What are the drawbacks?
+
+Answer: I think the constructor should not be explicit, as it can be used to represent a book that had no sales. The benefits of making the constructor explicit is that it prevents the compiler from implicitly converting code, and therefore the code runs as expected. The drawback of making the code explicit is that we have to call the constructor explicitly in order to make conversions, or we have to statically cast the object. 

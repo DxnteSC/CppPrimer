@@ -1,0 +1,13 @@
+Question: For each of the three following declarations of combine, explain what happens if we call i.combine(s), where i is a Sales_data and s is a string: 
+
+(a) Sales_data &combine(Sales_data); 
+(b) Sales_data &combine(Sales_data&); 
+(c) Sales_data &combine(const Sales_data&) const;
+
+Answer:
+
+(a): s is converted into a temporary Sales_data and then copied as the parameter of combine.
+
+(b): error, s is converted into a temporary Sales_data but a reference to a temporary is an error.
+
+(c): error, function shouldn't be const as it is attempting to change i.
