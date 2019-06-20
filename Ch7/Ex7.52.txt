@@ -1,0 +1,15 @@
+Question: Using our first version of Sales_data from § 2.6.1 (p. 72), explain the following initialization. Identify and fix any problems.
+
+Code:
+
+struct Sales_data {
+    std::string bookNo;
+    unsigned units_sold = 0;
+    double revenue = 0.0;
+};
+
+Sales_data item = {"978-0590353403", 25, 15.99};
+
+Answer:
+
+Problem is that units_sold and revenue are in class initialised, therefore the class is not an aggregate class. This means that item can not be initialised using a braced list. To fix, remove the initialisation of units_sold and revenue.

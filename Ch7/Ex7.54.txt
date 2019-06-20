@@ -1,0 +1,3 @@
+Question: Should the members of Debug that begin with set_ be declared as constexpr? If not, why not?
+
+Answer: No, because the the statements inside generate values at run time.
