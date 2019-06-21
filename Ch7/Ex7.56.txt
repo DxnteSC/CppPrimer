@@ -1,0 +1,3 @@
+Question: What is a static class member? What are the advantages of static members? How do they differ from ordinary members?
+
+Answer: A static class member is a member of a class which does not belong to objects of the class. Advantages of static members os that they can be used to store information on an entire class, without each object needing that information hard-coded in so they are storage efficient, furthermore if the static member of a class changes, all objects of that class will use the new value. They differ from ordinary members as they can be incomplete types, and can be used as default arguments in class member functions.

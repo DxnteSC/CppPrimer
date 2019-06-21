@@ -1,0 +1,22 @@
+Question: Which, if any, of the following static data member declarations and definitions are errors? Explain why.
+
+Code: 
+
+// example.h
+class Example {
+public:
+    static double rate = 6.5; // Error 1
+    static const int vecSize = 20;
+    static vector<double> vec(vecSize); // Error 2
+};
+
+// example.C
+#include "example.h"
+double Example::rate; // Error 3
+vector<double> Example::vec; // Error 4
+
+Answer:
+
+Error 1: cannot initialise a static member inside the class.
+Error 2: cannot use brackets for in-class initialiser, and static member should be initialised outside of class.
+Error 3 and Error 4: need to initialise static members.
