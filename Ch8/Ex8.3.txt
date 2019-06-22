@@ -1,0 +1,5 @@
+Question: What causes the following while to terminate? 
+
+while (cin >> i) /*  ...    */
+
+Answer: if i enters an error state.
