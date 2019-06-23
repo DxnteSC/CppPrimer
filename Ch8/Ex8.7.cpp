@@ -2,12 +2,12 @@
 #include <fstream>
 
 int main(int argc, char* argv[]) {
-    if (argc > 2) {
+    if (argc > 3) {
         std::cerr << "Too many arguments passed" << std::endl;
         return -2;
     }
-    if (argc != 2) {
-        std::cerr << "Need to pass file for input" << std::endl;
+    if (argc != 3) {
+        std::cerr << "Need to pass files for input and output" << std::endl;
         return -3;
     }
     std::ifstream input(argv[1]);
@@ -15,6 +15,7 @@ int main(int argc, char* argv[]) {
         std::cerr << "Failed to open file: " << argv[1] << std::endl;
         return -4;
     }
+    std::ofstream output(argv[2]);
     Sales_data total;
     if (read(input,total)) {
         Sales_data trans;
@@ -22,11 +23,11 @@ int main(int argc, char* argv[]) {
             if (total.isbn() == trans.isbn()) {
                 total.combine(trans);
             } else {
-                print(std::cout, total) << std::endl;
+                print(output, total) << std::endl;
                 total = trans;
             }
         }
-        print(std::cout, total) << std::endl;
+        print(output, total) << std::endl;
         return 0;
     } else {
         std::cerr << "No Data" << std::endl;
