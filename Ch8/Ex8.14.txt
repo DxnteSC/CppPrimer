@@ -1,0 +1,3 @@
+Question: Why did we declare entry and nums as const auto &?
+
+Answer: To ensure that we can not manipulate entry or numskulls, we use a references to avoid copying large strings. 
