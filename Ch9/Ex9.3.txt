@@ -1,0 +1,3 @@
+Question What are the constraints on the iterators that form iterator ranges?
+
+Answer: End must not precede Begin; both Begin and End must refer to elements, or one past  the end of the same container.
