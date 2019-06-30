@@ -1,0 +1,14 @@
+Question: What are the types of the following four objects?
+
+Code: 
+
+vector<int> v1; 
+const vector<int> v2; 
+auto it1 = v1.begin(), it2 = v2.begin(); // a, b
+auto it3 = v1.cbegin(), it4 = v2.cbegin(); // c, d
+Answer:
+
+(a): std::vector<int>::iterator
+(b): std::vector<int>::const_iterator
+(c): std::vector<int>::const_iterator
+(d): std::vector<int>const_iterator

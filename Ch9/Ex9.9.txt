@@ -1,0 +1,3 @@
+Question: What is the difference between the begin and cbegin functions?
+
+Answer: begin is overloaded, whilst begin is not. Begin returns an iterator, whereas begin returns a const_iterator.

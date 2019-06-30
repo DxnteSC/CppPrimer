@@ -1,0 +1,6 @@
+Question: What type should be used to read elements in a list of strings? To write them?
+
+Answer:
+
+To read: std::list<std::string>::const_iterator or std::list<std::string>::iterator
+To write: std::list<std::string>::iterator
