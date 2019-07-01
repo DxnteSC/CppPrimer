@@ -1,0 +1,3 @@
+Question: Assuming c1 and c2 are containers, what (if any) constraints does the following usage place on the types of c1 and c2? if (c1 < c2)
+
+Answer: c1 and c2 must have matching container and element types. The element types of c1 and c2 must support the < relational operator.
