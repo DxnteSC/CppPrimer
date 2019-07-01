@@ -1,0 +1,3 @@
+Question: Explain the differences between the constructor that takes a container to copy and the constructor that takes two iterators.
+
+Answer: The constructor that takes a container to copy requires the container type and element types to match. The constructor that takes two iterators has no requirement for the container types to match, and element types do not need to match as long as there is a valid conversion between types.

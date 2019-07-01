@@ -1,0 +1,10 @@
+Question: Show an example of each of the six ways to create and initialize a vector. Explain what values each vector contains.
+
+Answer:
+
+(1): std::vector<T> v; empty
+(2): std::vector<T>  v1 = {0,1,2,3,4,5}; vector contains elements 1,2,3,4,5
+(3): std::vector<T> v2 = v1; v2 is a copy of v1
+(4): std::vector<T> v3(10); v3 contains ten copies of the default initialised T
+(5): std::vector<T> v4(10,n); v4 contains ten copies of n
+(6): std::vector<T> v5(v1.begin(),v1.end()); v5 is another copy of v1
