@@ -1,0 +1,12 @@
+Question: Assuming iv is a vector of ints, what is wrong with the following program? How might you correct the problem(s)?
+
+Code: 
+
+vector<int>::iterator iter = iv.begin(),
+                      mid = iv.begin() + iv.size()/2;
+while (iter != mid)
+    if (*iter == some_val)
+        iv.insert(iter, 2 * some_val); // a
+    ++iter
+
+Answer: the value of tier never changes, and insert doesn't support args, to fix, change line a to iter = iv.emplace(iter, 2 * some_val); and add line b

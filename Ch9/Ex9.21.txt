@@ -1,0 +1,3 @@
+Question: Explain how the loop from page 345 that used the return from insert to add elements to a list would work if we inserted into a vector instead.
+
+Answer: It would work in the exact same way, but would be more expensive.
