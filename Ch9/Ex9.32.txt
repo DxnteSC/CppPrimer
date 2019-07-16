@@ -1,0 +1,12 @@
+Question: In the program onpage 354 would it be legal to write the call to insert as follows? If not, why not?
+
+iter = vi.insert(iter, *iter++);
+
+Call to insert in program: 
+
+iter = vi.insert(iter, *iter);
+
+Answer:
+
+It is legal but may invalidate the program logic, this is because the order of evaluation of arguments is undefined, therefore the *iter++ may occur first, resulting in the odd number not being duplicated.
+
