@@ -1,0 +1,3 @@
+Question: Given that vec holds 25 elements, what does vec.resize(100) do? What if we next wrote vec.resize(10)?
+
+Answer: vec.resize(100), adds 75 value initialised objects to vec. vec.resize(10) removes 90 objects, which are the 75 previously added objects and the back 15 objects of the original vec.
