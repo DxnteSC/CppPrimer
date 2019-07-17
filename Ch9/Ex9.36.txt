@@ -1,0 +1,3 @@
+Question: Can a container have a capacity less than its size?
+
+Answer: No, as elements in a vector are contiguous, if the capacity was less than size this wouldn't be possible.

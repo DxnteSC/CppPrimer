@@ -1,0 +1,3 @@
+Question: Explain the difference between a vector’s capacity and its size.
+
+Answer: A vector's size is how many elements it stores, a vector's capacity is the amount of space in memory the vector takes up.
