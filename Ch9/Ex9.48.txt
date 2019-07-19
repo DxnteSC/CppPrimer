@@ -1,0 +1,5 @@
+Question: Given the definitions of name and numbers on page 365, what does numbers.find(name) return?
+
+Definitions: string numbers("0123456789"), name("r2d2");
+
+Answer: std::string::npos
