@@ -1,0 +1,3 @@
+Question: Assuming v is a vector<double>, what, if anything, is wrong with calling accumulate(v.cbegin(), v.cend(), 0)?
+
+Answer: The compiler converts all the doubles in v to ints as the argument passed into accumulate is an int. therefore, the accumulation will be wrong.

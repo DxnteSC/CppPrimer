@@ -1,0 +1,5 @@
+Question: In the call to equal on rosters, what would happen if both rosters held C-style strings, rather than library strings?
+
+Code: equal(roster1.cbegin(), roster1.cend(), roster2.cbegin());
+
+Answer: nothing, equal functions in the same way as std::string.
