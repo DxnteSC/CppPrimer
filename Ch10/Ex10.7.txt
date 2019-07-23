@@ -1,0 +1,20 @@
+Question: Determine if there are any errors in the following programs and, if so, correct the error(s):
+
+Code: 
+
+(a): 
+vector<int> vec; list<int> lst; int i;
+while (cin >> i)
+	lst.push_back(i);
+copy(lst.cbegin(), lst.cend(), vec.begin());
+
+(b):
+vector<int> vec;
+vec.reserve(10); // reserve is covered in § 9.4 (p. 356)
+fill_n(vec.begin(), 10, 0);
+
+Answer:
+
+(a): need to use a back_inserter as vec is empty and for copy to work the destination must be at least as large as the input range, therefore instead of vec.begin() it should be back_inserter(vec).
+
+(b): again need to use back_inserter(vec) instead of vec.begin(). This is because reserve changes the capacity, not the size of the vector, therefore, whilst the capacity is now ten, the size of vec is still 0, and so the vec is not large enough for fill_n.

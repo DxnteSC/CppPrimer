@@ -1,0 +1,3 @@
+Question: Why do you think the algorithms don’t change the size of containers?
+
+Answer: Algorithms act on container elements, not the container, therefore they cannot directly change the size of the container. Furthermore, changing the size of containers could invalidate the iterators given in the iterator range and lead to undefined behaviour. 
