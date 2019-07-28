@@ -1,0 +1,9 @@
+Question: Explain the differences among the three kinds of insert iterators.
+
+Answer:
+
+front_inserter: calls push_front on the container, if the container supports it; reverses the order of the list; takes one argument;
+
+back_inserter: calls push_back on the container, if the container supports it; keeps the order of the list the same; takes one argument.
+
+inserter: calls insert on the container; keeps the order of the list the same; takes two arguments.
