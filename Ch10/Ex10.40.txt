@@ -1,0 +1,6 @@
+Question: What kinds of iterators do you think copy requires? What about reverse or unique?
+
+Answer: 
+Copy - input for first two parameters, output for third parameter.
+Reverse - bidirectional
+Unique - forward

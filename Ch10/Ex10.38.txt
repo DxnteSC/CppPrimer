@@ -1,0 +1,13 @@
+Question: List the five iterator categories and the operations that each supports.
+
+Answer: 
+
+Input - prefix and postfix increment; deference, only on the left hand side of an assignment and arrow operator.
+
+Output - prefix and postfix increment; deference, only on the left hand side.
+
+Forward iterator - same as input and output, but can read or write the same element multiple times.
+
+Bidirectional iterator - same as forward, also supports prefix and postfix decrement.
+
+Random access iterator - same as bidirectional but also supports relational operators; addition and subtraction on iterators and integral types; subtraction between iterators; and subscript notation.

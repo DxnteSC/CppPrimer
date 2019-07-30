@@ -1,0 +1,6 @@
+Question: What kind of iterator does a list have? What about a vector?
+
+Answer: 
+
+List: bidirectional
+Vector: random access.
