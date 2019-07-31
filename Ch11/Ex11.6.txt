@@ -1,0 +1,3 @@
+Question: Explain the difference between a set and a list. When might you use one or the other?
+
+Answer: A set is an associative container, a list is a sequential container. Choosing one over the other depends on the performance needed for searching, insertion/deletion and whether elements need to be unique or not. 

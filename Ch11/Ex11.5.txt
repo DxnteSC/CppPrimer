@@ -1,0 +1,3 @@
+Question: Explain the difference between a map and a set. When might you use one or the other?
+
+Answer: A map uses key-value pairs, set use keys only. A map might be used when certain values need to be retrieved from their keys, sets might be used when certain values need to be kept track of.
