@@ -1,0 +1,16 @@
+Question: Based only on the algorithm and argument names, describe the operation that the each of the following library algorithms performs:
+
+(a): replace(beg, end, old_val, new_val);
+(b): replace_if(beg, end, pred, new_val);
+(c): replace_copy(beg, end, dest, old_val, new_val);
+(d): replace_copy_if(beg, end, dest, pred, new_val);
+
+Answer: 
+
+(a): Replaces all of the elements between beg and end that have the value old val with new_val.
+
+(b); Replaces all of the elements between beg and end that pred returns true for wit new val.
+
+(c): Copies all of the elements between beg and end to dest, replacing old_val with new_val.
+
+(d): Copies all of the elements between beg and end to dest, replacing those for which pred returns true with new val.
