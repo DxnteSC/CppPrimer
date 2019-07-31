@@ -1,0 +1,9 @@
+Question: Give an example of when each of list, vector, deque, map, and set might be most useful.
+
+Answer: 
+
+List - reading a fixed number of words, inserting them in the container alphabetically as they are entered (technically associative containers are better but...)
+Vector - storing game objects which need to be kept track of
+Deque - storing a software application's list of undo operations
+Map - dictionary
+Set - a collection of int values which are acceptable for a program.
