@@ -1,0 +1,7 @@
+Question: Define a variable that you initialize by calling begin() on the multiset named bookstore from § 11.2.2 (p. 425). Write the variable’s type without using auto or decltype.
+
+std::multiset<Sales_data, bool (*) (const Sales_data&, const Sales_data&) bookstore(compareISBN)
+
+Answer:
+
+std::multisite<Sales_data, bool (*) (const Sales_data&, const Sales_data&>::iterator it = bookstore.begin()

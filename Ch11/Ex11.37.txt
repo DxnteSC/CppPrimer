@@ -1,0 +1,7 @@
+Question: What are the advantages of an unordered container as compared to the ordered version of that container? What are the advantages of the ordered version?
+
+Answer: 
+
+Unordered container - hashing gives better average case performance; no cost to sort container; 
+
+Ordered container - automatically sorts keys, easier to use as no need for hashing,

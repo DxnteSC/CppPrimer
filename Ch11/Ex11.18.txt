@@ -1,0 +1,8 @@
+Question: Write the type of map_it from the loop on page 430 without using auto or decltype. 
+
+std::map<std::string, size_t> word_count;
+auto map_it = word_count.cbegin()
+
+Answer: 
+
+std::map<std::string, std::size_t>::const_iterator

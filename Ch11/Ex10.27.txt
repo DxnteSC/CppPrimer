@@ -1,0 +1,3 @@
+Question: What kinds of problems would you use count to solve? When might you use find instead?
+
+Answer: Would use count for problems which require the number of times a key appears, would use find for problems which require knowing whether or not a key is present.

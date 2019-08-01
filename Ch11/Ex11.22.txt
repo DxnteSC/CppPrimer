@@ -1,0 +1,7 @@
+Question: Given a map<string, vector<int>>, write the types used as an argument and as the return value for the version of insert that inserts one element.
+
+Answer: 
+
+Type for argument is std::pair<std::string, std::vector<int>>
+
+Return value is std::pair<std::map<std::string, std::vector<int>>::iterator, bool>

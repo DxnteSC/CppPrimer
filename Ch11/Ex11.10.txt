@@ -1,0 +1,3 @@
+Question: Could we define a map from vector<int>::iterator to int? What about from list<int>::iterator to int? In each case, if not, why not?
+
+Answer: Can define a map from std::vector<int>::iterator to int, cannot define a map from std::list<int>::iterator to int as std::list<T>::iterators to not iterator arithmetic and so do not support <.

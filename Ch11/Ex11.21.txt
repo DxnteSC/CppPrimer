@@ -1,0 +1,7 @@
+Question: Assuming word_count is a map from string to size_t and word is a string, explain the following loop:
+
+while (cin >> word)
+  ++word_count.insert({word, 0}).first->second;
+
+Answer: if word is not already in word_count, create a new pair with key word and value 0, else, if word is already in word_count increment the value of word. This works as the code parenthesises to ++(((word_count.insert({word,0})).first)->second)
+

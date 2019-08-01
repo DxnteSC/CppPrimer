@@ -1,0 +1,5 @@
+Question: Define and initialize a variable to hold the result of calling find on a map from string to vector of int.
+
+Answer: 
+Std::map<std::string,std::vector<int>> m;
+std::map<std::string,std::vector<int>>::iterator mIt = m.find("x");

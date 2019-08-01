@@ -1,0 +1,3 @@
+Question: What are the mapped_type, key_type, and value_type of a map from int to vector<int>?
+
+Answer: Mapped_type is std::vector<int>, key_type is int and value_type is std::pair<int,std::vector<int>>.

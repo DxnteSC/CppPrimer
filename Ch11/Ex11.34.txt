@@ -1,0 +1,3 @@
+Question: What would happen if we used the subscript operator instead of find in the transform function?
+
+Answer: A new key would be created for s, with an empty string as it's value, which is not the desired result.

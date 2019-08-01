@@ -1,0 +1,9 @@
+Question: Contrast the following program with the one in the previous exercise 
+vector<int> v;
+v[0] = 1;
+
+Previous exercise code: 
+map<int, int> m;
+m[0] = 1;
+
+Answer: Previous exercise code creates a new key value-pair of {0,1}, the code in this exercise causes an error as it is trying to access an element which doesn't exist.

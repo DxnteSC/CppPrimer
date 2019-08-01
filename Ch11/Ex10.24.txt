@@ -1,0 +1,6 @@
+Question: What does the following program do? 
+map<int, int> m;
+m[0] = 1;
+
+Answer: Creates a new key-value pair of {0,1} in m.
+

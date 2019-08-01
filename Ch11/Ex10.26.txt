@@ -1,0 +1,5 @@
+Question:What type can be used to subscript a map? What type does the subscript operator return? Give a concrete example—that is, define a map and then write the types that can be used to subscript the map and the type that would be returned from the subscript operator.
+
+Answer: The type that can be used to subscript a map is the key_type of the map.
+
+std::map<std::string,int>, std::string can be used to subscript the map, int, the mapped_type, would be returned from the subscript operator.

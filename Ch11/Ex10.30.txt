@@ -1,0 +1,11 @@
+Question: Explain the meaning of the operand pos.first->second used in the output expression of the final program in this section.
+
+Code: 
+
+for (auto pos = authors.equal_range(search_item);
+     pos.first != pos.second; ++pos.first)
+    cout << pos.first->second << endl;
+
+Answer: 
+
+Derefences pos.first, which is the iterator to the pair with key search_item and returns the mapped_value of that pair, which is printed.

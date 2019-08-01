@@ -1,0 +1,5 @@
+Question: In buildMap, what effect, if any, would there be from rewriting
+
+trans_map[key] = value.substr(1); as trans_map.insert({key, value.substr(1)})?
+
+Answer: First form changes the value of the key to the new phrase if the key repeats, second form keeps the old phrase and ignores any attempt to the change the value if the key is repeated.

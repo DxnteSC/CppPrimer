@@ -1,0 +1,3 @@
+Question: What do upper_bound, lower_bound, and equal_range return when you pass them a key that is not in the container?
+
+Answer: upper_bound and lower_bound return iterators to where the key would go, or the off-the-end iterator if the key would have the largest value; equal range returns a pair with equal iterators of where the key would go, or the off-the-end iterator if the key would have the largest value.

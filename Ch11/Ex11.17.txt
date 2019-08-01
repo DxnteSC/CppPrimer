@@ -1,0 +1,15 @@
+Question: Assuming c is a multiset of strings and v is a vector of strings, explain the following calls. Indicate whether each call is legal:
+
+Code: 
+
+(a): copy(v.begin(), v.end(), inserter(c, c.end()));
+(b): copy(v.begin(), v.end(), back_inserter(c));
+(c): copy(c.begin(), c.end(), inserter(v, v.end()));
+(d): copy(c.begin(), c.end(), back_inserter(v));
+
+Answer: 
+
+(a): Copies all of the elements from v into c, c is then reordered as sets are ordered.
+(b): Copies all of the elements from v into the end of c. Illegal as associative containers to not support push_back.
+(c): Copies all of the elements from c into the end of v.
+(d): Copies all of the elements from c into the end of v.
