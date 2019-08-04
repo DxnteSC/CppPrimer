@@ -1,0 +1,7 @@
+Question: We did not make the constructor that takes an initializer_list explicit. Discuss the pros and cons of this design choice.
+
+Answer: 
+
+Pros: we can use = {args} to initialise a StrBlob object; we can use assignment to assign an initialiser list to a StrBlob object; we can pass initialise lists to functions that take a StrBlob.
+
+Cons: possible to overlook implicit conversion by compiler which can lead to difficulties debugging.
