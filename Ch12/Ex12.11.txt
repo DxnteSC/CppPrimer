@@ -1,0 +1,14 @@
+Question: What would happen if we called process as follows?
+
+Function:
+void process(shared_ptr<int> ptr)
+{
+    // use ptr
+} 
+
+Code: 
+process(shared_ptr<int>(p.get()));
+
+
+Answer: 
+Error, ptr refers to a shared_ptr<int> which points to the same memory as the built-in pointer returned from p.get(), when process is finished, ptr decrements the reference count to 0, which frees the memory of the built-in pointer, this frees the memory which p originally points to, which makes p point to memory which has already been deleted.

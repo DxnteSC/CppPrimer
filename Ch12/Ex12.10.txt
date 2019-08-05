@@ -1,0 +1,15 @@
+Question: Explain whether the following call to the process function defined on page 464 is correct. If not, how would you correct the call?
+
+Function:
+void process(shared_ptr<int> ptr)
+{
+    // use ptr
+} 
+
+Code: 
+shared_ptr<int> p(new int(42));
+process(shared_ptr<int>(p));
+
+Answer:
+
+The code is correct, the shared_ptr passed to process is a copy of the shared_ptr p. This increments the reference count to 2. When process is finished, the copy, ptr is freed and the reference count returns to its original value, therefore after process, the reference count remains unchanged, instead of removing the original shared pointer. Despite this, due to how smart_ptrs function, explicitly copying p is unnecessary.

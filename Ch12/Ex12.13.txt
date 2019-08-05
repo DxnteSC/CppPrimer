@@ -1,0 +1,10 @@
+Question: What happens if we execute the following code?
+
+Code:
+auto sp = make_shared<int>();
+auto p = sp.get();
+delete p;
+
+Answer:
+
+The memory that sp points to is freed when delete p is called, meaning sp become a dangling pointer and when the reference count to sp reaches 0, it will attempt to free memory which has already been freed.

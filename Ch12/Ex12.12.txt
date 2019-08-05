@@ -1,0 +1,22 @@
+Question: Using the declarations of p and sp explain each of the following calls to process. If the call is legal, explain what it does. If the call is illegal, explain why: 
+
+void process(std::shared_ptr<int> ptr)
+{
+    // use ptr
+}
+
+auto p = new int();
+auto sp = make_shared<int>(); 
+
+(a) process(sp); 
+(b) process(new int()); 
+(c) process(p); 
+(d) process(shared_ptr<int>(p));
+
+Answer:
+
+
+(a): legal calls process on sp.
+(b): illegal, process takes a shared_ptr and shared_ptr constructors are explicit, therefore no conversion made from new int() to shared_ptr<int>. 
+(c): illegal, process takes a shared_ptr and shared_ptr constructors are explicit, therefore no conversion made from built-in pointer to shared_ptr<int>.
+(d): legal, creates a temporary shared_ptr<int> which manages the memory p points to, bad practice as results in p pointing to memory which has already been freed.
