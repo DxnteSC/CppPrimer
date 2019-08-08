@@ -1,0 +1,22 @@
+Question: Which of the following unique_ptr declarations are illegal or likely to result in subsequent program error? Explain what the problem is with each one.
+
+Declarations: 
+
+int ix = 1024, *pi = &ix, *pi2 = new int(2048);
+typedef unique_ptr<int> IntP; 
+
+(a) IntP p0(ix); 
+(b) IntP p1(pi); 
+(c) IntP p2(pi2); 
+(d) IntP p3(&ix); 
+(e) IntP p4(new int(2048)); 
+(f) IntP p5(p2.get());
+
+Answer: 
+
+(a): illegal, as ix is not dynamically allocated memory 
+(b): legal but may cause subsequent program errors as pi points to memory which is not dynamically allocated.
+(c): legal, p2 assumes control over the memory pi2 points to.
+(d): legal but same issue as (b).
+(e): legal
+(f): legal but may cause subsequent program errors as two unique pointers will be pointing to the same memory.
