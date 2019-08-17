@@ -6,7 +6,7 @@ std::string make_plural(size_t ctr, const std::string& word,
     return (ctr > 1) ? word + ending : word;
 }
 
-TextQuery::TextQuery(std::ifstream& is): file(new std::vector<std::string>)
+TextQuery::TextQuery(std::ifstream& is): file(new StrBlob)
 {
     std::string text;
     while (std::getline(is,text))
@@ -39,6 +39,6 @@ std::ostream& print(std::ostream& os, const QueryResult& qr)
 {
     os << qr.sought << " occurs " << qr.lines->size() << " " << make_plural(qr.lines->size(), "time", "s") << std::endl;
     for (auto num: *qr.lines)
-        os << "\t(line " <<  num + 1 << ") " << *(qr.file->begin() + num) << std::endl;
+        os << "\t(line " <<  num + 1 << ") " << StrBlobPtr(*qr.file, num).deref() << std::endl;
     return os;
 }
