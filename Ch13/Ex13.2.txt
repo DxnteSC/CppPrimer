@@ -1,0 +1,5 @@
+Question: Explain why the following declaration is illegal:
+
+Sales_data::Sales_data(Sales_data rhs);
+
+Answer: class parameter must be a reference, this is because if it wasn't a reference the call would never succeed, as to call the copy constructor, the copy constructor would be needed to copy the argument, but to copy the argument, the copy constructor would need to be called, creating an infinite loop.

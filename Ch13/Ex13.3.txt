@@ -1,0 +1,3 @@
+Question: What happens when we copy a StrBlob? What about StrBlobPtrs?
+
+Answer: When we copy a StrBlob, the shared_ptr is copied, meaning both StrBlobs will use the same vector. The same thing happens with the StrBlobPtr.
