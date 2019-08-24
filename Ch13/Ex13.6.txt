@@ -1,0 +1,3 @@
+Question: What is a copy-assignment operator? When is this operator used? What does the synthesised copy-assignment operator do? When is it synthesised?
+
+Answer: Overloaded = operator which deals with the assignment of objects of the class. The synthesised copy-assignment operator assigns each non-static member of the right hand object to the corresponding member of the left hand object, and returns a reference to the left hand object. It is synthesised when the class doesn't define one itself.

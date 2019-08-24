@@ -1,0 +1,3 @@
+Question: What happens when we assign one StrBlob to another? What about StrBlobPtrs?
+
+Answer: When we assign one StrBlob to another, the shared_ptr is copied, meaning both StrBlobs will point to the same vector. The same thing happens with the StrBlobPtr.
