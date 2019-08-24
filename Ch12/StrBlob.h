@@ -16,6 +16,7 @@ public:
     typedef std::vector<std::string>::size_type size_type;
 public:
     friend class StrBlobPtr;
+    friend class ConstStrBlobPtr;
 public:
     StrBlob(): data(std::make_shared<std::vector<std::string>>()) {}
     StrBlob(std::initializer_list<std::string> il): data(std::make_shared<std::vector<std::string>>(il)) {}
