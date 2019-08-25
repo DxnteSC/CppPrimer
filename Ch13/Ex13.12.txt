@@ -1,0 +1,11 @@
+Question: How many destructor calls occur in the following code fragment?
+
+Code:
+
+bool fcn(const Sales_data *trans, Sales_data accum)
+{
+    Sales_data item1(*trans), item2(accum);
+    return item1.isbn() != item2.isbn();
+}
+
+Answer: 3, on item1, item2 and accum (as it is a copy)

@@ -1,0 +1,3 @@
+Question: What happens when a StrBlob object is destroyed? What about a StrBlobPtr?
+
+Answer: When a StrBlob object is destroyed, the reference count of the shared_ptr member is decremented, if it is decremented to zero, the vector it points to is also destroyed. When a StrBlobPtr is destroyed, the weak_ptr is destroyed.

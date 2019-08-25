@@ -1,0 +1,3 @@
+Question: What is a destructor? What does the synthesised destructor do? When is a destructor synthesised?
+
+Answer: A destructor is responsible for freeing memory and destroying the non-static members of a class when it is destroyed. The synthesised destructor does nothing, as members are automatically destroyed as part of the implicit destruction which follows the destructor. A destructor is synthesised when one is not defined.
