@@ -1,0 +1,3 @@
+Question: What if the parameter in f were const numbered&? Does that change the output? If so, why? What output gets generated?
+
+No, the output remains the same as the previous exercise.

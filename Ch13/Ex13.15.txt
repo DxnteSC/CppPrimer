@@ -1,0 +1,3 @@
+Question: Assume numbered has a copy constructor that generates a new serial number. Does that change the output of the calls in the previous exercise? If so, why? What output gets generated?
+
+Answer: Yes it changes the output, as the default copy-constructor copies the right hand operands into the left hand, which results in all of the mysn members being the same. When the defined copy constructor generates a new serial number, each copies results in different serial numbers for each variable so, three different numbers are generated in the output.
