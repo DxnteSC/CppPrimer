@@ -1,0 +1,7 @@
+Question: Explain what happens when we copy, assign, or destroy objects of our TextQuery and QueryResult classes from § 12.3 (p. 484).
+
+Answer:
+
+TextQuery: when we copy TextQuery objects, the shared_ptr and the map is copied, this means that the copy will refer to the same vector as the original; when we assign TextQuery objects, the same thing happens; when we destroy TextQuery objects, the reference count of the shared_ptr is decremented by one, and the map is deleted.
+
+QueryResult: when we copy QueryResult objects, the string is copied, and the two shared_ptr are copied, this means that the copy will refer to the same set and vector as the original; when we assign QueryResult objects, the same thing happens; when we destroy QueryResult objects, the reference count of the shared_ptrs are decremented by one and the string is deleted.
