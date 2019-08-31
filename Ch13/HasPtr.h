@@ -3,22 +3,38 @@
 
 #include <string>
 
-class HasPtr {
+class ValueHasPtr
+{
 public:
-    HasPtr(const std::string &s = std::string(), int num = 0):
+    ValueHasPtr(const std::string &s = std::string(), int num = 0):
     ps(new std::string(s)), i(num) { }
-    HasPtr(const std::string &s = std::string()):
+    ValueHasPtr(const std::string &s = std::string()):
     ps(new std::string(s)), i(0) { }
-    HasPtr(const HasPtr& hp) : ps(new std::string(*hp.ps)), i(hp.i) {}
-    HasPtr& operator= (const HasPtr&);
-    ~HasPtr()
+    ValueHasPtr(const ValueHasPtr& hp) : ps(new std::string(*hp.ps)), i(hp.i) {}
+    ValueHasPtr& operator= (const ValueHasPtr&);
+    ~ValueHasPtr()
     {
         delete ps;
     }
-    
 private:
     std::string* ps;
     int    i;
 };
+
+class PointerHasPtr
+{
+    PointerHasPtr(const std::string &s = std::string(), int num = 0):
+    ps(new std::string(s)), i(num), use(new std::size_t(1)) { }
+    PointerHasPtr(const std::string &s = std::string()):
+    ps(new std::string(s)), i(0), use(new std::size_t(1)) { }
+    PointerHasPtr(const PointerHasPtr& hp) : ps(new std::string(*hp.ps)), i(hp.i), use(hp.use) { ++use; }
+    PointerHasPtr& operator= (const PointerHasPtr&);
+    ~PointerHasPtr();
+    
+private:
+    std::string* ps;
+    int    i;
+    std::size_t* use;
+}
 
 #endif

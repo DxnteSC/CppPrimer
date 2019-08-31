@@ -1,0 +1,3 @@
+Question: What would happen if the version of HasPtr in this section didn’t define a destructor? What if HasPtr didn’t define the copy constructor?
+
+Answer: if this version of HasPtr didn't define a destructor, then the memory that the HasPtr object string points to will not be freed, if it didn't define a copy constructor, then the string pointer is copied rather than the string it points to, meaning that both objects will point to the same memory.
