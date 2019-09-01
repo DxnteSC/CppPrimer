@@ -1,0 +1,3 @@
+Question: Explain why the calls to swap inside swap(HasPtr&, HasPtr&) do not cause a recursion loop.
+
+Answer: The two swap functions called ) are the overloaded versions of swap function in standard library.
