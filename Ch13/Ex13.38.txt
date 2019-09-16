@@ -1,0 +1,3 @@
+Question: We did not use copy and swap to define the Message assignment operator. Why do you suppose this is so?
+
+Answer: using copy and swap would result in unnecessary extra steps within the assignment operator.

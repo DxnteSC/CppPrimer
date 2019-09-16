@@ -1,0 +1,3 @@
+Question: What would happen if Message used the synthesised versions of the copy-control members?
+
+Answer: if we used the synthesised version of the copy-control members, the messages wouldn't be added to or removed from the correct folders when copied.
