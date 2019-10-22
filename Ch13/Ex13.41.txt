@@ -1,0 +1,3 @@
+Question: Why did we use postfix increment in the call to construct inside push_back? What would happen if it used the prefix increment?
+
+Answer: postfix increment was used as we wanted the value to be constructed at first_free and then for first_free to be incremented, if we used the prefix increment, then we would increment to the next memory and then construct the memory which would result in memory being unconstructed within the StrVec.
