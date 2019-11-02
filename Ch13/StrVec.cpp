@@ -11,7 +11,7 @@ void StrVec::push_back(const std::string& s)
 {
     chk_n_alloc(); // ensure that there is room for another element
     // construct a copy of s in the element to which first_free points
-    alloc.construct(first_free++,s); // increments fiurst free to show that a new element has been added; postfix so the element is constructed in the current valye of first_free and then first_free is incremented to point to the next unconstructed element
+    alloc.construct(first_free++,s); // increments first free to show that a new element has been added; postfix so the element is constructed in the current valye of first_free and then first_free is incremented to point to the next unconstructed element
 }
 
 void StrVec::pop_back()

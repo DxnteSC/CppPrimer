@@ -1,6 +1,7 @@
 #ifndef CHAR_STR_H
 #define CHAR_STR_H
 
+#include <iostream>
 #include <memory>
 #include <string>
 
@@ -26,11 +27,12 @@ public:
     {
         return cap - firstElem; 
     }
-    
+
     std::string str() const 
     {
         return std::string(begin(),end());
     }
+    
 
 private:
     char* firstElem;

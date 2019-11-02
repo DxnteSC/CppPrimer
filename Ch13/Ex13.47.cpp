@@ -1,4 +1,4 @@
-#include "charString.h"
+#include "Ex13.47.h"
 
 std::allocator<char> charString::alloc;
 
@@ -12,6 +12,7 @@ charString::charString(const char* c): charString()
 
 charString::charString(const charString& cs)
 {
+    std::cout << "COPY CONSTRUCTOR" << std::endl;
     auto newData = allocateAndCopy(cs.begin(),cs.end());
     firstElem = newData.first;
     firstFree = cap = newData.second;
@@ -19,6 +20,7 @@ charString::charString(const charString& cs)
 
 charString& charString::operator=(const charString& rhs)
 {
+    std::cout << "COPY-ASSIGNMENT OPERATOR" << std::endl;
     auto newData = allocateAndCopy(rhs.begin(),rhs.end());
     free();
     firstElem = newData.first;

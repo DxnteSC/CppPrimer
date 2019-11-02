@@ -1,0 +1,3 @@
+Question: Distinguish between an rvalue reference and an lvalue reference.
+
+Answer: lvalue referense are persistent; must be bound to an lvalue, or a const rvalue; refers to an objects identity, rvalue references are temporary; must be bound to an rvalue; refers to an objects value.
