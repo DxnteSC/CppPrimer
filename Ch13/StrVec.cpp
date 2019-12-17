@@ -59,7 +59,7 @@ StrVec& StrVec::operator=(const StrVec& rhs)
     return *this;
 }
 
-void StrVec::reallocate()
+/*void StrVec::reallocate()
 {
     // allocate space for twice as many elements, or 1 if the StrVec is empty
     auto newcapacity = size() ? size() * 2 : 1;
@@ -75,6 +75,18 @@ void StrVec::reallocate()
     elements = newData;
     first_free = dest;
     cap = elements + newcapacity;
+}*/
+
+void StrVec::reallocate()
+{
+    auto newCap = size() ? size() * 2: 1;
+    auto first = alloc.allocate(newCap);
+    // move the elements
+    auto last = std::uninitialized_copy(make_move_iterator(begin()),make_move_iterator(end()),first);
+    free();
+    elements = first;
+    first_free = last;
+    cap = elements + newCap;
 }
 
 void StrVec::reserve(size_t sz)
@@ -105,4 +117,27 @@ void StrVec::resize(size_t sz, const std::string& s)
         for (int i = size() - sz; i != 0; --i)
             pop_back();
     }
+}
+
+StrVec::StrVec(StrVec&& s) noexcept // move wno't throw any exceptions
+: elements(s.elements), first_free(s.first_free),cap(s.cap) 
+// member initializers take over the resources in s
+{
+    // leave s in a state in which it is sage to run the destructor
+    s.elements = s.first_free = s.cap = nullptr;
+}
+
+StrVec& StrVec::operator=(StrVec&& rhs) noexcept
+{
+    // direct test for self-assignment
+    if (this != &rhs)
+    {
+        free();
+        elements = rhs.elements;
+        first_free = rhs.first_free;
+        cap = rhs.cap;
+        //leave rhs in a destructible state
+        rhs.elements = rhs.first_free = rhs.cap = nullptr;
+    }
+    return *this;
 }

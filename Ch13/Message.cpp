@@ -68,3 +68,30 @@ void swap(Message& lhs, Message& rhs)
         f->addMsg(&rhs);
 }
 
+void Message::moveFolders(Message* m)
+{
+    folders = std::move(m->folders);
+    for (auto f: folders)
+    {
+        f->remmsg(m);
+        f->addMsg(this);
+    }
+    m->folders.clear();
+}
+
+Message::Message(Message&& m)
+{
+    moveFolders(&m);
+}
+
+Message& Message::operator=(Message&& rhs)
+{
+    if (this != rhs)
+    {
+        removeFromFolders();
+        contents = std::move(rhs.contents);
+        moveFolders(&rhs);
+    }
+    return *this;
+}
+

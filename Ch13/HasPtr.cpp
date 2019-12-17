@@ -1,13 +1,5 @@
 #include "HasPtr.h"
 
-ValueHasPtr& ValueHasPtr::operator= (const ValueHasPtr& rhs)
-{
-    std::string* temp = new std::string(*rhs.ps);
-    delete ps;
-    ps = temp;
-    i = rhs.i;
-    return *this;
-}
 
 bool ValueHasPtr::operator< (const ValueHasPtr& rhs) const
 {

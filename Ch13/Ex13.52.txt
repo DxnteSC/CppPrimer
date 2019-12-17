@@ -1,0 +1,11 @@
+Question: Explain in detail what happens in the assignments of the HasPtr objects on page 541. In particular, describe step by step what happens to values of hp, hp2, and of the rhs parameter in the HasPtr assignment operator.
+
+Code:
+
+(1) hp = hp2; //  hp2 is an lvalue; copy constructor used to copy hp2
+(2) hp = std::move(hp2); // move constructor moves hp2
+
+Answer:
+(1) - the copy-assignment operator is used, first the members of the rhs parameter is copied, then they are deleted, and then the copied members are used to assign those of lhs.
+
+(2) - the move operator is used, move returns an rvalue reference to hp2, the members of hp2 are moved into hp, and then the members of hp2 are set to values suitable to be destroyed.

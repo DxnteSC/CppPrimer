@@ -14,12 +14,19 @@ public:
     ValueHasPtr(const std::string &s = std::string()):
     ps(new std::string(s)), i(0) { }
     ValueHasPtr(const ValueHasPtr& hp) : ps(new std::string(*hp.ps)), i(hp.i) {}
-    ValueHasPtr& operator= (const ValueHasPtr&);
+    ValueHasPtr& operator=(ValueHasPtr rhs) { // copy- and move- assignment operator
+        std::swap(*this,rhs); 
+        return *this;
+    } 
     bool operator< (const ValueHasPtr&) const;
     ~ValueHasPtr()
     {
         delete ps;
     }
+    ValueHasPtr(ValueHasPtr&& p) noexcept: ps(p.ps), i(p.i) { // move constructor
+        p.ps = 0;
+    }
+
     inline void swap(ValueHasPtr& rhs)
     {
         std::cout << "Internal Swap" << std::endl;

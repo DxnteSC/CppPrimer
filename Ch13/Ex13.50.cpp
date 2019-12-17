@@ -1,4 +1,4 @@
-#include "charString.h"
+#include "Ex13.50.h"
 
 std::allocator<char> charString::alloc;
 
@@ -12,6 +12,7 @@ charString::charString(const char* c): charString()
 
 charString::charString(const charString& cs)
 {
+    std::cout << "COPY CONSTRUCTOR" << std::endl;
     auto newData = allocateAndCopy(cs.begin(),cs.end());
     firstElem = newData.first;
     firstFree = cap = newData.second;
@@ -19,6 +20,7 @@ charString::charString(const charString& cs)
 
 charString& charString::operator=(const charString& rhs)
 {
+    std::cout << "COPY-ASSIGNMENT CONSTRUCTOR" << std::endl;
     auto newData = allocateAndCopy(rhs.begin(),rhs.end());
     free();
     firstElem = newData.first;
@@ -75,11 +77,13 @@ void charString::free()
 
 charString::charString(charString&& c) noexcept: firstElem(c.firstElem), firstFree(c.firstFree),cap(c.cap)
 {
+    std::cout << "MOVE CONSTRUCTOR" << std::endl;
     c.firstElem = c.firstFree = c.cap = nullptr;
 }
 
 charString& charString::operator=(charString&& rhs) noexcept
 {
+    std::cout << "MOVE-ASSIGNMENT CONSTRUCTOR" << std::endl;
     if (this != &rhs)
     {
         free();
