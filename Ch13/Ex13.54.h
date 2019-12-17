@@ -15,7 +15,7 @@ public:
     ps(new std::string(s)), i(0) { }
     HasPtr(const HasPtr& hp) : ps(new std::string(*hp.ps)), i(hp.i) {}
     
-    HasPtr& operator=(HasPtr rhs) {
+    HasPtr& operator=(HasPtr& rhs) {
         std::swap(*this,rhs); 
         return *this;
     } 
