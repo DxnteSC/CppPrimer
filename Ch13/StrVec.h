@@ -17,6 +17,7 @@ public:
     StrVec(StrVec&&) noexcept; // move constructor
     StrVec& operator=(StrVec&&) noexcept;
     void push_back(const std::string&); // copy the element
+    void push_back(std::string&&); // move the element
     void pop_back(); // remove last element
     size_t size() const { return first_free - elements; }
     size_t capacity() const { return cap - elements; }

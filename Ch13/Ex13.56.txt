@@ -1,0 +1,11 @@
+Question: What would happen if we defined sorted as
+
+Code:
+Foo Foo::sorted() const & 
+{
+    Foo ret(*this);
+    return ret.sorted();
+}
+
+Answer:
+Ret is an lvalue, so function keeps calling itself.

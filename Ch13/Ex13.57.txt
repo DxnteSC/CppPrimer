@@ -1,0 +1,10 @@
+Question: What if we defined sorted as
+
+Code:
+Foo Foo::sorted() const & 
+{ 
+    return Foo(*this).sorted(); 
+}
+
+Answer:
+Calls the rvalue version of sorted

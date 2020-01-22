@@ -14,6 +14,12 @@ void StrVec::push_back(const std::string& s)
     alloc.construct(first_free++,s); // increments first free to show that a new element has been added; postfix so the element is constructed in the current valye of first_free and then first_free is incremented to point to the next unconstructed element
 }
 
+void StrVec::push_back(std::string&& s)
+{
+    chk_n_alloc(); // reallocates the StrVec if necessary
+    alloc.construct(first_free++,std::move(s));
+}
+
 void StrVec::pop_back()
 {
     if (size() > 0)
