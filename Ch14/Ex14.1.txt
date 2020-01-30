@@ -1,0 +1,3 @@
+Question: In what ways does an overloaded operator differ from a built-in operator? In what ways are overloaded operators the same as the built-in operators?
+
+Answer: Overloaded operators can be used as a normal function, they also do not preserve order of operations. They are used in the same way as the built-in operators. 

@@ -1,0 +1,7 @@
+Question: Describe the behavior of the Sales_data input operator if given the following input: 
+(a) 0-201-99999-9 10 24.95 
+(b) 10 24.95 0-210-99999-9
+
+Answer:
+(a): Works perfectly fine.
+(b): The data is read, just incorrectly. 10 is the bookNo, 24 is the units_sold and 0.95 is the revenue.

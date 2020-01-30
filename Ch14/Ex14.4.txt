@@ -1,0 +1,19 @@
+Question: Explain how to decide whether the following should be class members: 
+(a) % 
+(b) %= 
+(c) ++ 
+(d) -> 
+(e) << 
+(f) && 
+(g) == 
+(h) ()
+
+Answer:
+(a): nonmember
+(b): ought to be a member
+(c): usually should be a member
+(d): must be a memeber
+(e): nonmember
+(f): nonmember
+(g): nonmember
+(h): must be a member
