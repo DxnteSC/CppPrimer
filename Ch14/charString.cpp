@@ -91,8 +91,14 @@ charString& charString::operator=(charString&& rhs) noexcept
     return *this;
 }
 
-std::ostream& operator<< (std::ostream& os , const charString& s) 
+bool operator==(const charString& lhs, const charString& rhs)
 {
-    os << s.str();
-    return os;
+    if (lhs.str() == rhs.str())
+        return true;
+    return false;
+}
+
+bool operator!=(const charString& lhs, const charString& rhs)
+{
+    return !(lhs == rhs);
 }

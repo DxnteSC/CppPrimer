@@ -1,13 +1,14 @@
 #ifndef CHAR_STR_H
 #define CHAR_STR_H
 
-#include <iostream>
 #include <memory>
 #include <string>
 
 class charString
 {
-friend std::ostream& operator<< (std::ostream&, const charString&);
+public:
+    friend bool operator==(const charString&, const charString&);
+    friend bool operator!=(const charString&, const charString&);
 public:
     charString(): firstElem(nullptr), firstFree(nullptr), cap(nullptr) {}
     charString(const char*);
@@ -53,6 +54,7 @@ private:
     std::pair<char*,char*> allocateAndCopy(const char*, const char*);
 };
 
-std::ostream& operator<< (std::ostream&, const charString&);
+bool operator==(const charString&, const charString&);
+bool operator!=(const charString&, const charString&);
 
 #endif

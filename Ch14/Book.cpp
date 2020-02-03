@@ -15,3 +15,15 @@ std::istream& operator>> (std::istream& is, Book& b)
     }
     return is;
 }
+
+bool operator== (const Book& lhs, const Book& rhs)
+{
+    if ((lhs.author == rhs.author) && (lhs.title == rhs.title) && (lhs.genre == rhs.genre))
+        return true;
+    return false;
+}
+
+bool operator!= (const Book& lhs, const Book& rhs)
+{
+    return !(lhs == rhs);
+}
