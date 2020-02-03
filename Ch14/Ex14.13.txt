@@ -1,0 +1,1 @@
+No other arithmetic operators make sense for our Sales_data class

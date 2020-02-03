@@ -1,0 +1,3 @@
+Question: Why do you think it is more efficient to define operator+ to call operator+= rather than the other way around?
+
+Answer: operator+= uses operator+, whereas operator+ does not use operator+=, therefore extra work would be needed if we used operator+= to define operator+. 

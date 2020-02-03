@@ -46,3 +46,10 @@ std::ostream &print (std::ostream& os, const Sales_data& data) {
 Sales_data::Sales_data(std::istream& is) {
     read(is, *this);
 }
+
+Sales_data operator+(const Sales_data& lhs, const Sales_data& rhs)
+{
+    Sales_data sum = lhs;
+    sum.combine(rhs);
+    return sum;
+}
