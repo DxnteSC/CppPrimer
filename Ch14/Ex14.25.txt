@@ -1,0 +1,3 @@
+Question: Implement any other assignment operators your class should define. Explain which types should be used as operands and why.
+
+Answer: None, as all the memebers are strings or an int, and having only an author etc... or just a number which represents the number of pages wouldn't make a lot of sense. An initialiser list of strings also wouldn't work as then page number wouldn't be added.

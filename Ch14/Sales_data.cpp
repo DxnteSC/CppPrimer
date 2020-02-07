@@ -53,3 +53,16 @@ Sales_data operator+(const Sales_data& lhs, const Sales_data& rhs)
     sum.combine(rhs);
     return sum;
 }
+
+// Using + means that a tempororay object has to be created, which is more inefficient than the other implementation.
+Sales_data& Sales_data::operator+= (const Sales_data& sd)
+{
+    *this = *this + sd;
+    return *this;
+}
+
+Sales_data& Sales_data::operator=(const std::string& s)
+{
+    bookNo = s;
+    return *this;
+}

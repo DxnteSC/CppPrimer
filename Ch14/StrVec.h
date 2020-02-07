@@ -23,6 +23,7 @@ public:
     ~StrVec(); // destructor
     StrVec(StrVec&&) noexcept; // move constructor
     StrVec& operator=(StrVec&&) noexcept;
+    StrVec& operator=(std::initializer_list<std::string>);
     void push_back(const std::string&); // copy the element
     void push_back(std::string&&); // move the element
     void pop_back(); // remove last element

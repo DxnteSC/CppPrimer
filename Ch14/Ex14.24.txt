@@ -1,0 +1,3 @@
+Question: Decide whether the class you used in exercise 7.40 from § 7.5.1 (p. 291) needs a copy- and move-assignment operator. If so, define those operators.
+
+Answer: Book doesn't need a copy- and move-assignmen operator as one is synthesised using its member variables.

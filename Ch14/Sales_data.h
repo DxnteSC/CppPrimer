@@ -1,8 +1,8 @@
 #ifndef SALES_DATA_H
 #define SALES_DATA_H
 
-#include <string>
 #include <iostream>
+#include <string>
 
 class Sales_data
 {
@@ -26,6 +26,7 @@ public:
     std::string isbn() const {return bookNo;}
     Sales_data& combine(const Sales_data&);
     Sales_data& operator+= (const Sales_data&);
+    Sales_data& operator=(const std::string&);
 
 private:
     inline double avg_price() const {
