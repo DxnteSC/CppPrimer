@@ -19,6 +19,10 @@ public:
     friend class ConstStrBlobPtr;
     friend bool operator==(const StrBlob&, const StrBlob&);
     friend bool operator!=(const StrBlob&, const StrBlob&);
+    friend bool operator<(const StrBlob&, const StrBlob&);
+    friend bool operator>(const StrBlob&, const StrBlob&);
+    friend bool operator<=(const StrBlob&, const StrBlob&);
+    friend bool operator>=(const StrBlob&, const StrBlob&);
 public:
     StrBlob(): data(std::make_shared<std::vector<std::string>>()) {}
     StrBlob(std::initializer_list<std::string> il): data(std::make_shared<std::vector<std::string>>(il)) {}
@@ -42,12 +46,20 @@ private:
 
 bool operator==(const StrBlob&, const StrBlob&);
 bool operator!=(const StrBlob&, const StrBlob&);
+bool operator<(const StrBlob&, const StrBlob&);
+bool operator>(const StrBlob&, const StrBlob&);
+bool operator<=(const StrBlob&, const StrBlob&);
+bool operator>=(const StrBlob&, const StrBlob&);
 
 class StrBlobPtr
 {
 public:
     friend bool operator==(const StrBlobPtr&, const StrBlobPtr&);
     friend bool operator!=(const StrBlobPtr&, const StrBlobPtr&);
+    friend bool operator<(const StrBlobPtr&, const StrBlobPtr&);
+    friend bool operator>(const StrBlobPtr&, const StrBlobPtr&);
+    friend bool operator<=(const StrBlobPtr&, const StrBlobPtr&);
+    friend bool operator>=(const StrBlobPtr&, const StrBlobPtr&);
 public:
     StrBlobPtr(): curr(0) {}
     explicit StrBlobPtr(StrBlob& a, size_t sz = 0): wptr(a.data), curr(sz) {}
@@ -61,12 +73,20 @@ private:
 
 bool operator==(const StrBlobPtr&, const StrBlobPtr&);
 bool operator!=(const StrBlobPtr&, const StrBlobPtr&);
+bool operator<(const StrBlobPtr&, const StrBlobPtr&);
+bool operator>(const StrBlobPtr&, const StrBlobPtr&);
+bool operator<=(const StrBlobPtr&, const StrBlobPtr&);
+bool operator>=(const StrBlobPtr&, const StrBlobPtr&);
 
 class ConstStrBlobPtr
 {
 public:
     friend bool operator==(const ConstStrBlobPtr&, const ConstStrBlobPtr&);
     friend bool operator!=(const ConstStrBlobPtr&, const ConstStrBlobPtr&);
+    friend bool operator<(const ConstStrBlobPtr&, const ConstStrBlobPtr&);
+    friend bool operator>(const ConstStrBlobPtr&, const ConstStrBlobPtr&);
+    friend bool operator<=(const ConstStrBlobPtr&, const ConstStrBlobPtr&);
+    friend bool operator>=(const ConstStrBlobPtr&, const ConstStrBlobPtr&);
 public:
     ConstStrBlobPtr(): wptr(), curr(0) {}
     ConstStrBlobPtr(const StrBlob& a, size_t sz = 0): wptr(a.data), curr(sz) {}
@@ -80,5 +100,9 @@ private:
 
 bool operator==(const ConstStrBlobPtr&, const ConstStrBlobPtr&);
 bool operator!=(const ConstStrBlobPtr&, const ConstStrBlobPtr&);
+bool operator<(const ConstStrBlobPtr&, const ConstStrBlobPtr&);
+bool operator>(const ConstStrBlobPtr&, const ConstStrBlobPtr&);
+bool operator<=(const ConstStrBlobPtr&, const ConstStrBlobPtr&);
+bool operator>=(const ConstStrBlobPtr&, const ConstStrBlobPtr&);
 
 #endif

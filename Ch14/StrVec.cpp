@@ -164,3 +164,23 @@ bool operator!=(const StrVec& lhs, const StrVec& rhs)
 {
     return !(lhs == rhs);
 }
+
+bool operator<(const StrVec& lhs, const StrVec& rhs)
+{
+    return lhs.size() < rhs.size();
+}
+
+bool operator>(const StrVec& lhs, const StrVec& rhs)
+{
+    return rhs < lhs;
+}
+
+bool operator<=(const StrVec& lhs, const StrVec& rhs)
+{
+    return !(lhs > rhs);
+}
+
+bool operator>=(const StrVec& lhs, const StrVec& rhs)
+{
+    return !(lhs < rhs);
+}

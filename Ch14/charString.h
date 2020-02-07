@@ -9,6 +9,10 @@ class charString
 public:
     friend bool operator==(const charString&, const charString&);
     friend bool operator!=(const charString&, const charString&);
+    friend bool operator<(const charString&, const charString&);
+    friend bool operator>(const charString&, const charString&);
+    friend bool operator<=(const charString&, const charString&);
+    friend bool operator>=(const charString&, const charString&);
 public:
     charString(): firstElem(nullptr), firstFree(nullptr), cap(nullptr) {}
     charString(const char*);
@@ -56,5 +60,9 @@ private:
 
 bool operator==(const charString&, const charString&);
 bool operator!=(const charString&, const charString&);
+bool operator<(const charString&, const charString&);
+bool operator>(const charString&, const charString&);
+bool operator<=(const charString&, const charString&);
+bool operator>=(const charString&, const charString&);
 
 #endif

@@ -102,3 +102,23 @@ bool operator!=(const charString& lhs, const charString& rhs)
 {
     return !(lhs == rhs);
 }
+
+bool operator<(const charString& lhs, const charString& rhs)
+{
+    return lhs.str() < rhs.str();
+}
+
+bool operator>(const charString& lhs, const charString& rhs)
+{
+    return rhs < lhs;
+}
+
+bool operator<=(const charString& lhs, const charString& rhs)
+{
+    return !(lhs > rhs);
+}
+
+bool operator>=(const charString& lhs, const charString& rhs)
+{
+    return !(lhs < rhs);
+} 

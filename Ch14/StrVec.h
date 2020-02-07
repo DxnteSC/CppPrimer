@@ -11,6 +11,10 @@ class StrVec
 public:
     friend bool operator==(const StrVec&, const StrVec&);
     friend bool operator!=(const StrVec&, const StrVec&);
+    friend bool operator<(const StrVec&, const StrVec&);
+    friend bool operator>(const StrVec&, const StrVec&);
+    friend bool operator<=(const StrVec&, const StrVec&);
+    friend bool operator>=(const StrVec&, const StrVec&);
 public:
     StrVec(): elements(nullptr), first_free(nullptr), cap(nullptr) {} // alloc is defualt initialised
     StrVec(std::initializer_list<std::string>);
@@ -46,5 +50,9 @@ private:
 
 bool operator==(const StrVec&, const StrVec&);
 bool operator!=(const StrVec&, const StrVec&);
+bool operator<(const StrVec&, const StrVec&);
+bool operator>(const StrVec&, const StrVec&);
+bool operator<=(const StrVec&, const StrVec&);
+bool operator>=(const StrVec&, const StrVec&);
 
 #endif

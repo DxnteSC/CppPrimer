@@ -27,3 +27,23 @@ bool operator!= (const Book& lhs, const Book& rhs)
 {
     return !(lhs == rhs);
 }
+
+bool operator< (const Book& lhs, const Book& rhs)
+{
+    return lhs.author < rhs.author; 
+}
+
+bool operator> (const Book& lhs, const Book& rhs)
+{
+    return rhs < lhs;
+}
+
+bool operator<= (const Book& lhs, const Book& rhs)
+{
+    return !(lhs > rhs);
+}
+
+bool operator>= (const Book& lhs, const Book& rhs)
+{
+    return !(lhs < rhs);
+}

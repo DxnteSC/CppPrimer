@@ -12,6 +12,10 @@ friend std::istream& operator>> (std::istream&, Book&);
 friend std::istream &read (std::istream&, Book&);
 friend bool operator== (const Book&, const Book&);
 friend bool operator!= (const Book&, const Book&);
+friend bool operator< (const Book&, const Book&);
+friend bool operator> (const Book&, const Book&);
+friend bool operator<=(const Book&, const Book&);
+friend bool operator>= (const Book&, const Book&);
 public:
     Book(): author("Classified"),  title("Undecided"), genre("Classified"),pageNumbers(0) {}
     Book(const std::string& a): author(a){}
@@ -35,5 +39,9 @@ std::istream& operator>> (std::istream&, Book&);
 std::istream &read (std::istream&, Book&);
 bool operator== (const Book&, const Book&);
 bool operator!= (const Book&, const Book&);
+bool operator< (const Book&, const Book&);
+bool operator> (const Book&, const Book&);
+bool operator<=(const Book&, const Book&);
+bool operator>= (const Book&, const Book&);
 
 #endif 

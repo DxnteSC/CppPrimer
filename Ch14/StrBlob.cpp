@@ -53,6 +53,26 @@ bool operator!=(const StrBlob& lhs, const StrBlob& rhs)
     return !(lhs == rhs);
 }
 
+bool operator<(const StrBlob& lhs, const StrBlob& rhs)
+{
+    return (*lhs.data < *rhs.data);
+}
+
+bool operator>(const StrBlob& lhs, const StrBlob& rhs)
+{
+    return rhs < lhs;
+}
+
+bool operator<=(const StrBlob& lhs, const StrBlob& rhs)
+{
+    return !(lhs > rhs);
+}
+
+bool operator>=(const StrBlob& lhs, const StrBlob& rhs)
+{
+    return !(lhs < rhs);
+}
+
 StrBlobPtr StrBlob::begin()
 {
     return StrBlobPtr(*this);
@@ -102,6 +122,26 @@ bool operator!=(const StrBlobPtr& lhs, const StrBlobPtr& rhs)
     return !(lhs == rhs);
 }
 
+bool operator<(const StrBlobPtr& lhs, const StrBlobPtr& rhs)
+{
+    return lhs.wptr.lock() == rhs.wptr.lock() && lhs.curr < rhs.curr;
+}
+
+bool operator>(const StrBlobPtr& lhs, const StrBlobPtr& rhs)
+{
+    return rhs < lhs;
+}
+
+bool operator<=(const StrBlobPtr& lhs, const StrBlobPtr& rhs)
+{
+    return !(lhs > rhs);
+}
+
+bool operator>=(const StrBlobPtr& lhs, const StrBlobPtr& rhs)
+{
+    return !(lhs < rhs);
+}
+
 std::shared_ptr<std::vector<std::string>> ConstStrBlobPtr::check(std::size_t i, const std::string& msg) const
 {
     auto ret = wptr.lock();
@@ -139,4 +179,24 @@ bool operator==(const ConstStrBlobPtr& lhs, const ConstStrBlobPtr& rhs)
 bool operator!=(const ConstStrBlobPtr& lhs, const ConstStrBlobPtr& rhs)
 {
     return !(lhs == rhs);
+}
+
+bool operator<(const ConstStrBlobPtr& lhs, const ConstStrBlobPtr& rhs)
+{
+    return *lhs.wptr.lock() == *rhs.wptr.lock() && lhs.curr < rhs.curr;
+}
+
+bool operator>(const ConstStrBlobPtr& lhs, const ConstStrBlobPtr& rhs)
+{
+    return rhs < lhs;
+}
+
+bool operator<=(const ConstStrBlobPtr& lhs, const ConstStrBlobPtr& rhs)
+{
+    return !(lhs > rhs);
+}
+
+bool operator>=(const ConstStrBlobPtr& lhs, const ConstStrBlobPtr& rhs)
+{
+    return !(lhs < rhs);
 }
