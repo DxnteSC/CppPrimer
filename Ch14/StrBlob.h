@@ -26,6 +26,8 @@ public:
 public:
     StrBlob(): data(std::make_shared<std::vector<std::string>>()) {}
     StrBlob(std::initializer_list<std::string> il): data(std::make_shared<std::vector<std::string>>(il)) {}
+    std::string& operator[] (std::size_t);
+    const std::string& operator[] (std::size_t) const;
     size_type size() const { return data -> size(); }
     bool empty() const { return data -> empty(); }
     // Add and remove elements
@@ -63,6 +65,8 @@ public:
 public:
     StrBlobPtr(): curr(0) {}
     explicit StrBlobPtr(StrBlob& a, size_t sz = 0): wptr(a.data), curr(sz) {}
+    std::string& operator[] (std::size_t);
+    const std::string& operator[] (std::size_t) const;
     std::string deref() const;
     StrBlobPtr& incr();
 private:
@@ -90,6 +94,8 @@ public:
 public:
     ConstStrBlobPtr(): wptr(), curr(0) {}
     ConstStrBlobPtr(const StrBlob& a, size_t sz = 0): wptr(a.data), curr(sz) {}
+    std::string& operator[] (std::size_t);
+    const std::string& operator[] (std::size_t) const;
     const std::string deref() const;
     ConstStrBlobPtr& incr();
 private:

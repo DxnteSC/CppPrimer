@@ -121,4 +121,14 @@ bool operator<=(const charString& lhs, const charString& rhs)
 bool operator>=(const charString& lhs, const charString& rhs)
 {
     return !(lhs < rhs);
-} 
+}
+
+char& charString::operator[] (std::size_t n)
+{
+    return firstElem[n];
+}
+
+const char& charString::operator[] (std::size_t n) const
+{
+    return firstElem[n];
+}

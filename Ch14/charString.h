@@ -21,6 +21,8 @@ public:
     charString& operator=(const charString&);
     charString(charString&&) noexcept;
     charString& operator=(charString&&) noexcept;
+    char& operator[] (std::size_t);
+    const char& operator[] (std::size_t) const;
     void push_back(const char&);
     void pop_back();
     char* begin() const { return firstElem; }

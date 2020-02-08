@@ -73,6 +73,16 @@ bool operator>=(const StrBlob& lhs, const StrBlob& rhs)
     return !(lhs < rhs);
 }
 
+std::string& StrBlob::operator[] (std::size_t n)
+{
+    return (*data)[n];
+}
+
+const std::string& StrBlob::operator[] (std::size_t n) const
+{
+    return (*data)[n];
+}
+
 StrBlobPtr StrBlob::begin()
 {
     return StrBlobPtr(*this);
@@ -142,6 +152,16 @@ bool operator>=(const StrBlobPtr& lhs, const StrBlobPtr& rhs)
     return !(lhs < rhs);
 }
 
+std::string& StrBlobPtr::operator[] (std::size_t n)
+{
+    return (*wptr.lock())[n];
+}
+
+const std::string& StrBlobPtr::operator[] (std::size_t n) const
+{
+    return (*wptr.lock())[n];
+}
+
 std::shared_ptr<std::vector<std::string>> ConstStrBlobPtr::check(std::size_t i, const std::string& msg) const
 {
     auto ret = wptr.lock();
@@ -199,4 +219,14 @@ bool operator<=(const ConstStrBlobPtr& lhs, const ConstStrBlobPtr& rhs)
 bool operator>=(const ConstStrBlobPtr& lhs, const ConstStrBlobPtr& rhs)
 {
     return !(lhs < rhs);
+}
+
+std::string& ConstStrBlobPtr::operator[] (std::size_t n)
+{
+    return (*wptr.lock())[n];
+}
+
+const std::string& ConstStrBlobPtr::operator[] (std::size_t n) const
+{
+    return (*wptr.lock())[n];
 }

@@ -193,3 +193,13 @@ StrVec& StrVec::operator=(std::initializer_list<std::string> il)
     first_free = cap = data.second;
     return *this;
 }
+
+std::string& StrVec::operator[](std::size_t n)
+{
+    return elements[n];
+}
+
+const std::string& StrVec::operator[] (std::size_t n) const 
+{
+    return elements[n];
+}
