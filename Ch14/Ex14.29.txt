@@ -1,0 +1,3 @@
+Question: We did not define a const version of the increment and decrement operators. Why not?
+
+Answer: they change the object, therefore can't be const.
