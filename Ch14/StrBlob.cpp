@@ -219,6 +219,16 @@ int StrBlobPtr::operator-(const StrBlobPtr &rhs) const
     return curr - rhs.curr;
 }
 
+std::string &StrBlobPtr::operator*() const
+{
+    auto p = check(curr, "dereference past end");
+    return (*p)[curr];
+}
+std::string *StrBlobPtr::operator->() const
+{
+    return &this->operator*();
+}
+
 std::shared_ptr<std::vector<std::string>> ConstStrBlobPtr::check(std::size_t i, const std::string &msg) const
 {
     auto ret = wptr.lock();
@@ -286,4 +296,19 @@ std::string &ConstStrBlobPtr::operator[](std::size_t n)
 const std::string &ConstStrBlobPtr::operator[](std::size_t n) const
 {
     return (*wptr.lock())[n];
+}
+
+const std::string &ConstStrBlobPtr::operator*() const
+{
+    auto p = check(curr, "deference past end");
+    return (*p)[curr];
+}
+const std::string *ConstStrBlobPtr::operator->() const
+{
+    return &this->operator*();
+}
+
+StrBlobPtr *PtrToStrBlobPtr::operator->() const
+{
+    return ptr;
 }

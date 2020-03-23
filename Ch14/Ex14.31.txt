@@ -1,0 +1,3 @@
+Question: Our StrBlobPtr class does not define the copy constructor, assignment operator, or a destructor. Why is that okay?
+
+Answer: The synthesised versions can be used.

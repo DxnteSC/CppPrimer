@@ -81,6 +81,8 @@ public:
     StrBlobPtr operator+(int) const;
     StrBlobPtr operator-(int) const;
     int operator-(const StrBlobPtr &) const;
+    std::string &operator*() const;
+    std::string *operator->() const;
 
 private:
     std::shared_ptr<std::vector<std::string>> check(std::size_t, const std::string &) const;
@@ -112,6 +114,8 @@ public:
     const std::string &operator[](std::size_t) const;
     const std::string deref() const;
     ConstStrBlobPtr &incr();
+    const std::string &operator*() const;
+    const std::string *operator->() const;
 
 private:
     std::shared_ptr<std::vector<std::string>> check(std::size_t, const std::string &) const;
@@ -125,5 +129,15 @@ bool operator<(const ConstStrBlobPtr &, const ConstStrBlobPtr &);
 bool operator>(const ConstStrBlobPtr &, const ConstStrBlobPtr &);
 bool operator<=(const ConstStrBlobPtr &, const ConstStrBlobPtr &);
 bool operator>=(const ConstStrBlobPtr &, const ConstStrBlobPtr &);
+
+class PtrToStrBlobPtr
+{
+public:
+    PtrToStrBlobPtr(StrBlobPtr *p) : ptr(p) {}
+    StrBlobPtr *operator->() const;
+
+private:
+    StrBlobPtr *ptr;
+};
 
 #endif
