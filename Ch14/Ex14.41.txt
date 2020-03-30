@@ -1,0 +1,3 @@
+Question: Why do you suppose the new standard added lambdas? Explain when you would use a lambda and when you would write a class instead.
+
+Answer: To make using the library algoritihms easier. A lamda should be used when a task needs to be done only once, a class should be used when a task needs to be done multiple times or if different paramaters are needed for the task.
