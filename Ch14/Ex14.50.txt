@@ -1,0 +1,17 @@
+Question: Show the possible class-type conversion sequences for the initializations of ex1 and ex2. Explain whether the initializations are legal or not.
+
+Code: 
+struct LongDouble 
+{
+    LongDouble(double = 0.0);
+    operator double();
+    operator float();
+};
+LongDouble ldObj;
+int ex1 = ldObj; 
+float ex2 = ldObj;
+
+Answer:
+ex1: ldObj -> double -> int oe ldObj -> float -> int; illegal as double and float are equally good matches.
+ex2: ldObj -> float; legal, float is an exact match.
+

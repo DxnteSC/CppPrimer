@@ -1,0 +1,19 @@
+Question: Show the conversion sequences (if any) needed to call each version of calc and explain why the best viable function is selected.
+
+Code: 
+
+struct LongDouble 
+{
+    LongDouble(double = 0.0);
+    operator double();
+    operator float();
+};
+
+void calc(int);
+void calc(LongDouble);
+double dval;
+calc(dval); // which calc?
+
+Answer: 
+void calc(int): double -> int; best viable function as promoting double to int is better than converting double to LongDouble
+void calc(LongDouble): double -> LongDouble;
