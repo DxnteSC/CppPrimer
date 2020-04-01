@@ -1,0 +1,6 @@
+Question: Given the definition of SmallInt on page 588, determine whether the following addition expression is legal. If so, what addition operator is used? If not, how might you change the code to make it legal? 
+
+SmallInt s1;
+double d = s1 + 3.14;
+
+Answer: Codes illegal, can use built-in operator+ (int, double) or SmallInt::operator+(const SmallInt&, SmallInt&), to fix, use a static_cast<double> on the SmallInt object or convert 3.14 to a SmallInt.
