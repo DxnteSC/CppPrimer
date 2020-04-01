@@ -16,4 +16,4 @@ calc(dval); // which calc?
 
 Answer: 
 void calc(int): double -> int; best viable function as promoting double to int is better than converting double to LongDouble
-void calc(LongDouble): double -> LongDouble;
+void calc(LongDouble): double -> LongDouble; not used
