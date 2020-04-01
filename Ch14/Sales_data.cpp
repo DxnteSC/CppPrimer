@@ -1,12 +1,14 @@
-#include"Sales_data.h"
+#include "Sales_data.h"
 
-Sales_data& Sales_data::combine(const Sales_data& rhs) {
+Sales_data &Sales_data::combine(const Sales_data &rhs)
+{
     units_sold += rhs.units_sold;
     revenue += rhs.revenue;
     return *this;
 }
 
-std::istream& operator>> (std::istream& is, Sales_data& data) {
+std::istream &operator>>(std::istream &is, Sales_data &data)
+{
     double price;
     is >> data.bookNo >> data.units_sold >> price;
     if (is)
@@ -20,34 +22,39 @@ std::istream& operator>> (std::istream& is, Sales_data& data) {
     return is;
 }
 
-std::ostream& operator<< (std::ostream& os, const Sales_data& data) {
+std::ostream &operator<<(std::ostream &os, const Sales_data &data)
+{
     os << data.bookNo << " " << data.units_sold << " " << data.revenue;
     return os;
 }
 
-Sales_data add(const Sales_data& lhs, const Sales_data& rhs) {
+Sales_data add(const Sales_data &lhs, const Sales_data &rhs)
+{
     Sales_data sum = lhs;
     sum.combine(rhs);
     return sum;
 }
 
-std::istream &read (std::istream& is, Sales_data& data) {
+std::istream &read(std::istream &is, Sales_data &data)
+{
     double price = 0;
     is >> data.bookNo >> data.units_sold >> price;
     data.revenue = data.units_sold * price;
     return is;
 }
 
-std::ostream &print (std::ostream& os, const Sales_data& data) {
+std::ostream &print(std::ostream &os, const Sales_data &data)
+{
     os << data.isbn() << " " << data.units_sold << " " << data.revenue;
     return os;
 }
 
-Sales_data::Sales_data(std::istream& is) {
+Sales_data::Sales_data(std::istream &is)
+{
     read(is, *this);
 }
 
-Sales_data operator+(const Sales_data& lhs, const Sales_data& rhs)
+Sales_data operator+(const Sales_data &lhs, const Sales_data &rhs)
 {
     Sales_data sum = lhs;
     sum.combine(rhs);
@@ -55,13 +62,13 @@ Sales_data operator+(const Sales_data& lhs, const Sales_data& rhs)
 }
 
 // Using + means that a tempororay object has to be created, which is more inefficient than the other implementation.
-Sales_data& Sales_data::operator+= (const Sales_data& sd)
+Sales_data &Sales_data::operator+=(const Sales_data &sd)
 {
     *this = *this + sd;
     return *this;
 }
 
-Sales_data& Sales_data::operator=(const std::string& s)
+Sales_data &Sales_data::operator=(const std::string &s)
 {
     bookNo = s;
     return *this;

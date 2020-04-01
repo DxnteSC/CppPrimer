@@ -1,0 +1,3 @@
+Question: Explain whether defining these Sales_data conversion operators is a good idea and whether they should be explicit.
+
+Answer: It's probably a bad idea, should define member functions to extract data from a Sales_data object. Therefore, they should be explicit.

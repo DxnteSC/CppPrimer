@@ -1,0 +1,10 @@
+Quesiton: Explain the difference between these two conversion operators: 
+struct Integral 
+{
+    operator const int(); (a)
+    operator int() const; (b)
+};
+
+Answer: 
+(a) implicit conversion of Integral to a const int, return value is not const so can be changed.
+(b) implicit conversion of Integral to an int, return value is const so can't be changed.
