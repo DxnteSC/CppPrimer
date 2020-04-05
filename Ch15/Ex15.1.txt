@@ -1,0 +1,3 @@
+Question: What is a virtual member?
+
+Answer: A member of the base class that the derived class is expected to define for itself.

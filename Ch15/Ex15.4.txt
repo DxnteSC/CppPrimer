@@ -1,0 +1,10 @@
+Question: Which of the following declarations, if any, are incorrect? Explain why. 
+class Base { ... }; 
+(a) class Derived : public Derived { ... }; 
+(b) class Derived : private Base { ... }; 
+(c) class Derived : public Base;
+
+Answer:
+(a): Incorrect, class can't inherit from itself.
+(b): Correct, also a definition.
+(c): Incorrect, class derivation ;ist does not appear in declaration.

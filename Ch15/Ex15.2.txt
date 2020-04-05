@@ -1,0 +1,3 @@
+Question: How does the protected access specifier differ from private?
+
+Answer: The protected access specifier allows derived classes to access the member whilst users cannot, the private access specifier allows neither the derived class or user access.
