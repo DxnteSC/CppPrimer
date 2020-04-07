@@ -1,0 +1,13 @@
+Question: When is it possible for an expression’s static type to differ from its dynamic type? Give three examples in which the static and dynamic type differ.
+
+Answer: An expression’s static type can differ from its dynamic type if an argument expects a base class but is given a class that derives from said base class. E.g.:
+
+class Base {/*...*/};
+class Derived : public Base {/*...*/}
+Derived d;
+Base *b = &d;
+Base &br = d;
+Derived *dp = &d;
+Base *b2 = dp;
+
+b2, b and br have differnt static and dynamic types.

@@ -1,0 +1,5 @@
+Question: Recalling the discussion from §8.1 (p. 311), explain how the program on page 317 that passed an ifstream to the Sales_data read function works.
+
+Answer: ifstream is inherited from istream. Thus, we can use objects of type ifstream as if they were istream objects. The parameter of read function is a reference to base type istream, the automatic derived-to-base conversion applies when we pass a derived type ifstream to that function. Inside read function, we can use the istream subpart in the ifstream object through the reference.
+
+Answer: istream is a base class and ifstream is derived from it. Therefore, we can use ifstream objects as istream objects. The automatic derived-to-base conversion applies when we pass an ifstream object as the istream& parameter to read. The istream subpart of the ifstream object is used.
