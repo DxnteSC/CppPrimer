@@ -1,0 +1,3 @@
+Question: Is it ever useful to declare a member function as both override and final? Why or why not?
+
+Answer: No, if a function is final, it means that either it is in the base class and shouldn't be overriden or it is in a derived class and is already overriding a function.

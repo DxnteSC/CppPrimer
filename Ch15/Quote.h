@@ -13,6 +13,7 @@ public:
     virtual ~Quote() = default;
     std::string isbn() const { return bookNo; }
     virtual double net_price(std::size_t) const;
+    virtual void debug();
 
 private:
     std::string bookNo;
@@ -27,6 +28,7 @@ public:
     Bulk_quote() = default;
     Bulk_quote(const std::string &, double, std::size_t, double);
     double net_price(std::size_t) const override;
+    void debug() override;
 
 private:
     std::size_t min_qty = 0;
@@ -39,6 +41,7 @@ public:
     Limited_quote() = default;
     Limited_quote(const std::string &, double, std::size_t, double);
     double net_price(std::size_t) const override;
+    void debug() override;
 
 private:
     std::size_t max_qty = 0;

@@ -1,0 +1,26 @@
+Question: Given the following classes, explain each print function. If there is a problem in this code, how would you fix it?
+
+
+Code: 
+
+class base {
+public:
+   string name() { return basename; }
+   virtual void print(ostream &os) { os << basename; }
+private:
+   string basename;
+};
+
+class derived : public base {
+public:
+   void print(ostream &os) { print(os); os << " " << i; }
+private:
+   int i;
+};
+
+Answer:
+
+The call to print in derived calls its own print, leading to an infinite loop. Therefore to fix, the print in derived should be base::print(os); os << " " << i.
+
+
+
