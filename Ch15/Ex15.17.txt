@@ -1,0 +1,5 @@
+Question: Try to define an object of type Disc_quote and see what errors you get from the compiler.
+
+Answer:
+
+error: variable type 'Disc_quote' is an abstract class

@@ -22,30 +22,34 @@ protected:
     double price = 0.0;
 };
 
-class Bulk_quote : public Quote
+class Disc_quote : public Quote
+{
+public:
+    Disc_quote() = default;
+    Disc_quote(const std::string &b, double p, std::size_t q, double d) : Quote(b, p), quantity(q), discount(d) {}
+    double net_price(std::size_t) const = 0;
+
+protected:
+    std::size_t quantity = 0;
+    double discount = 0;
+};
+
+class Bulk_quote : public Disc_quote
 {
 public:
     Bulk_quote() = default;
-    Bulk_quote(const std::string &, double, std::size_t, double);
+    Bulk_quote(const std::string &b, double p, std::size_t min, double d) : Disc_quote(b, p, min, d) {}
     double net_price(std::size_t) const override;
     void debug() override;
-
-private:
-    std::size_t min_qty = 0;
-    double discount = 0.0;
 };
 
-class Limited_quote : public Quote
+class Limited_quote : public Disc_quote
 {
 public:
     Limited_quote() = default;
-    Limited_quote(const std::string &, double, std::size_t, double);
+    Limited_quote(const std::string &b, double p, std::size_t max, double d) : Disc_quote(b, p, max, d) {}
     double net_price(std::size_t) const override;
     void debug() override;
-
-private:
-    std::size_t max_qty = 0;
-    double discount = 0.0;
 };
 
 void print_total(std::ostream &, const Quote &, std::size_t);
