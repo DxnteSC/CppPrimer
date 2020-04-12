@@ -1,0 +1,16 @@
+Question: Given the classes from page 612 and page 613, and assuming each object has the type specified in the comments, determine which of these assignments are legal. Explain why those that are illegal aren’t allowed:
+
+Base *p = &d1;  //  d1 has type Pub_Derv (a)
+p = &d2;        //  d2 has type Priv_Derv (b)
+p = &d3;        //  d3 has type Prot_Derv (c) 
+p = &dd1;       //  dd1 has type Derived_from_Public (d)
+p = &dd2;       //  dd2 has type Derived_from_Private (e)
+p = &dd3;       //  dd3 has type Derived_from_Protected (f)
+
+Answer:
+(a): legal.
+(b): illegal, can't cast to private base, i.e. code can only use derived-to-base conversion with public inheritance.
+(c): illegal, can't cast to protected base, i.e. code can only use derived-to-base conversion with public inheritance.
+(d): legal.
+(e): illegal, can't cast to private base, i.e. code can only use derived-to-base conversion with public inheritance.
+(f): illegal, can't cast to protected base, i.e. code can only use derived-to-base conversion with public inheritance.
