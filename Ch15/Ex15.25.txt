@@ -1,0 +1,3 @@
+Question: Why did we define a default constructor for Disc_quote? What effect, if any, would removing that constructor have on the behavior of Bulk_quote?
+
+Answer: The default constructor for Disc_quote is defined because all classes need a user-defined or synthesised constructor, without it Bulk_quote objects can't be default iniatilised.

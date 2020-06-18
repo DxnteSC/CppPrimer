@@ -3,14 +3,27 @@
 
 #include <iostream>
 #include <string>
+#include <utility>
 
 class Quote
 {
-
 public:
-    Quote() = default;
-    Quote(const std::string &s, double p) : bookNo(s), price(p) {}
-    virtual ~Quote() = default;
+    Quote()
+    {
+        std::cout << "Quote()" << std::endl;
+    }
+    Quote(const std::string &s, double p) : bookNo(s), price(p)
+    {
+        std::cout << "Quote(const std::string &s, double p)" << std::endl;
+    }
+    Quote(const Quote &);
+    Quote &operator=(const Quote &);
+    Quote(Quote &&) noexcept;
+    Quote &operator=(Quote &&) noexcept;
+    virtual ~Quote()
+    {
+        std::cout << "~Quote()" << std::endl;
+    }
     std::string isbn() const { return bookNo; }
     virtual double net_price(std::size_t) const;
     virtual void debug();
@@ -37,8 +50,18 @@ protected:
 class Bulk_quote : public Disc_quote
 {
 public:
-    Bulk_quote() = default;
-    Bulk_quote(const std::string &b, double p, std::size_t min, double d) : Disc_quote(b, p, min, d) {}
+    Bulk_quote()
+    {
+        std::cout << "Bulk_quote()" << std::endl;
+    }
+    Bulk_quote(const std::string &b, double p, std::size_t min, double d) : Disc_quote(b, p, min, d)
+    {
+        std::cout << "Bulk_quote(const std::string &b, double p, std::size_t min, double d)" << std::endl;
+    }
+    Bulk_quote(const Bulk_quote &);
+    Bulk_quote &operator=(const Bulk_quote &);
+    Bulk_quote(Bulk_quote &&) noexcept;
+    Bulk_quote &operator=(Bulk_quote &&) noexcept;
     double net_price(std::size_t) const override;
     void debug() override;
 };
