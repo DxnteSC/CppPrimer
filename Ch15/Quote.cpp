@@ -7,12 +7,12 @@ double Quote::net_price(std::size_t n) const
 
 void Quote::debug()
 {
-    std::cout << "Quote: " << this->isbn() << " " << price << std::endl;
+    // std::cout << "Quote: " << this->isbn() << " " << price << std::endl;
 }
 
 Quote::Quote(const Quote &q)
 {
-    std::cout << "Quote(const Quote &q)" << std::endl;
+    // std::cout << "Quote(const Quote &q)" << std::endl;
     bookNo = q.bookNo;
     price = q.price;
 }
@@ -20,7 +20,7 @@ Quote::Quote(const Quote &q)
 Quote &Quote::operator=(const Quote &rhs)
 
 {
-    std::cout << "Quote::operator=(const Quote &rhs)" << std::endl;
+    // std::cout << "Quote::operator=(const Quote &rhs)" << std::endl;
     bookNo = rhs.bookNo;
     price = rhs.price;
     return *this;
@@ -28,12 +28,12 @@ Quote &Quote::operator=(const Quote &rhs)
 
 Quote::Quote(Quote &&q) noexcept : bookNo(std::move(q.bookNo)), price(std::move(q.price))
 {
-    std::cout << "Quote(Quote &&q))" << std::endl;
+    // std::cout << "Quote(Quote &&q))" << std::endl;
 }
 
 Quote &Quote::operator=(Quote &&rhs) noexcept
 {
-    std::cout << "Quote::operator=(Quote &&rhs)" << std::endl;
+    // std::cout << "Quote::operator=(Quote &&rhs)" << std::endl;
     bookNo = std::move(rhs.bookNo);
     price = std::move(rhs.price);
     return *this;
@@ -57,22 +57,22 @@ void Bulk_quote::debug()
 
 Bulk_quote::Bulk_quote(const Bulk_quote &bQ) : Disc_quote(bQ)
 {
-    std::cout << "Bulk_quote(const Bulk_quote &)" << std::endl;
+    // std::cout << "Bulk_quote(const Bulk_quote &)" << std::endl;
 }
 Bulk_quote &Bulk_quote::operator=(const Bulk_quote &rhs)
 {
-    std::cout << "Bulk_quote(const Bulk_quote &)" << std::endl;
+    // std::cout << "Bulk_quote(const Bulk_quote &)" << std::endl;
     Disc_quote::operator=(rhs);
     return *this;
 }
 
 Bulk_quote::Bulk_quote(Bulk_quote &&bQ) noexcept : Disc_quote(std::move(bQ))
 {
-    std::cout << "Bulk_quote(Bulk_quote &&bQ)" << std::endl;
+    // std::cout << "Bulk_quote(Bulk_quote &&bQ)" << std::endl;
 }
 Bulk_quote &Bulk_quote::operator=(Bulk_quote &&rhs) noexcept
 {
-    std::cout << "Bulk_quote::operator=(Bulk_quote &&)" << std::endl;
+    // std::cout << "Bulk_quote::operator=(Bulk_quote &&)" << std::endl;
     Disc_quote::operator=(std::move(rhs));
     return *this;
 }
@@ -94,8 +94,7 @@ void Limited_quote::debug()
     std::cout << "Limited Quote: " << this->isbn() << " " << price << " " << quantity << " " << discount << std::endl;
 }
 
-void print_total(std::ostream &os, const Quote &q, std::size_t n)
+double print_total(std::ostream &os, const Quote &q, std::size_t n)
 {
-    double total = q.net_price(n);
-    os << "Total price for ( " << q.isbn() << " ) is: " << total << std::endl;
+    return q.net_price(n);
 }

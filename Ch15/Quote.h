@@ -10,11 +10,11 @@ class Quote
 public:
     Quote()
     {
-        std::cout << "Quote()" << std::endl;
+        // std::cout << "Quote()" << std::endl;
     }
     Quote(const std::string &s, double p) : bookNo(s), price(p)
     {
-        std::cout << "Quote(const std::string &s, double p)" << std::endl;
+        // std::cout << "Quote(const std::string &s, double p)" << std::endl;
     }
     Quote(const Quote &);
     Quote &operator=(const Quote &);
@@ -22,8 +22,10 @@ public:
     Quote &operator=(Quote &&) noexcept;
     virtual ~Quote()
     {
-        std::cout << "~Quote()" << std::endl;
+        // std::cout << "~Quote()" << std::endl;
     }
+    virtual Quote *clone() const & { return new Quote(*this); }
+    virtual Quote *clone() && { return new Quote(std::move(*this)); }
     std::string isbn() const { return bookNo; }
     virtual double net_price(std::size_t) const;
     virtual void debug();
@@ -50,20 +52,23 @@ protected:
 class Bulk_quote : public Disc_quote
 {
 public:
-    Bulk_quote()
-    {
-        std::cout << "Bulk_quote()" << std::endl;
-    }
-    Bulk_quote(const std::string &b, double p, std::size_t min, double d) : Disc_quote(b, p, min, d)
-    {
-        std::cout << "Bulk_quote(const std::string &b, double p, std::size_t min, double d)" << std::endl;
-    }
+    // Bulk_quote()
+    // {
+    //     std::cout << "Bulk_quote()" << std::endl;
+    // }
+    // Bulk_quote(const std::string &b, double p, std::size_t min, double d) : Disc_quote(b, p, min, d)
+    // {
+    //     std::cout << "Bulk_quote(const std::string &b, double p, std::size_t min, double d)" << std::endl;
+    // }
+    using Disc_quote::Disc_quote;
     Bulk_quote(const Bulk_quote &);
     Bulk_quote &operator=(const Bulk_quote &);
     Bulk_quote(Bulk_quote &&) noexcept;
     Bulk_quote &operator=(Bulk_quote &&) noexcept;
     double net_price(std::size_t) const override;
     void debug() override;
+    Bulk_quote *clone() const & override { return new Bulk_quote(*this); }
+    Bulk_quote *clone() && override { return new Bulk_quote(std::move(*this)); }
 };
 
 class Limited_quote : public Disc_quote
@@ -75,6 +80,6 @@ public:
     void debug() override;
 };
 
-void print_total(std::ostream &, const Quote &, std::size_t);
+double print_total(std::ostream &, const Quote &, std::size_t);
 
 #endif
