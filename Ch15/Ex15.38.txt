@@ -1,0 +1,10 @@
+Question: Are the following declarations legal? If not, why not? If so, explain what the declarations mean. 
+
+(a): BinaryQuery a = Query("fiery") & Query("bird");
+(b): AndQuery b = Query("fiery") & Query("bird");
+(c): OrQuery c = Query("fiery") & Query("bird");
+
+Answer:
+(a): illegal, can't make objects of BinaryQuery as it is a pure virtual class
+(b): legal, makes a new AndQuery object
+(c): illegal, operator&(query, query) isnt a friend class of OrQuery, therefore can't access any of its members/functions as it is a purely private class

@@ -1,0 +1,11 @@
+Question: For the expression built in Figure 15.3 (p. 638): 
+
+(a) List the constructors executed in processing that expression. 
+(b) List the calls to rep that are made from cout << q. 
+(c) List the calls to eval made from q.eval().
+
+Code:
+Query q = Query("fiery) & Query("bird") | Query("Wind);
+
+Answer:
+https://github.com/jaege/Cpp-Primer-5th-Exercises/blob/master/ch15/15.34.md

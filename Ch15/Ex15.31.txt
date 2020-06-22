@@ -1,0 +1,13 @@
+Question: Given that s1, s2, s3, and s4 are all strings, determine what objects are created in the following expressions:
+
+Code:
+
+(a) Query(s1) | Query(s2) & ~ Query(s3); 
+(b) Query(s1) | (Query(s2) & ~ Query(s3)); 
+(c) (Query(s1) & (Query(s2)) | (Query(s3) & Query(s4)));
+
+Answer:
+
+(a): 3 WordQuery; 1 NotQuery; 1 AndQuery; 1 OrQuery
+(b): 3 WordQuery; 1 NotQuery; 1 AndQuery; 1 OrQuery
+(c): 4 WordQuery; 2 AndQuery; 1 OrQuery

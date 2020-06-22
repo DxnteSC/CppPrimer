@@ -1,0 +1,3 @@
+Question: What about objects of type Query_base?
+
+Answer: QueryBase objects can't be copied, assigned, moved or destroyed as it has no data members. It also is impossible to directly create QueryBase objects. 

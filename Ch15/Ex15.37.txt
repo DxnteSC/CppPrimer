@@ -1,0 +1,3 @@
+Question: What changes would your classes need if the derived classes had members of type shared_ptr<Query_base> rather than of type Query?
+
+Answer: https://github.com/jaege/Cpp-Primer-5th-Exercises/tree/master/ch15/15.37

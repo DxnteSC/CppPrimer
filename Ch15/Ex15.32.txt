@@ -1,0 +1,3 @@
+Question: What happens when an object of type Query is copied, moved, assigned, and destroyed?
+
+Answer: Default copy-control is applied to the shared_ptr member.
