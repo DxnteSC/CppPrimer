@@ -1,0 +1,3 @@
+Question: Define instantiation.
+
+Answer: The class or function that the compiler creates when a template is called.

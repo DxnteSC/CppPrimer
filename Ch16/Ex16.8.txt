@@ -1,0 +1,3 @@
+Question: In the “Key Concept” box on page 108, we noted that as a matter of habit C++ programmers prefer using != to using <. Explain the rationale for this habit.
+
+Answer: < needs to be defined to be used, whereas != is defined by all iterators.
