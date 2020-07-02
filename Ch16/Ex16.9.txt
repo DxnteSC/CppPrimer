@@ -1,0 +1,3 @@
+Question: What is a function template? What is a class template?
+
+Answer: A function template is a way to initialise specific functions, class templates are the same but with classes.

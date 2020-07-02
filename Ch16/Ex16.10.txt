@@ -1,0 +1,3 @@
+Question: What happens when a class template is instantiated?
+
+Answer: A new instance of the class is created with the specified template type.
