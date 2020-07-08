@@ -39,8 +39,8 @@ public:
     friend bool operator!=<T>(const Blob &, const Blob &);
     friend bool operator< <T>(const Blob &, const Blob &);
     friend bool operator><T>(const Blob &, const Blob &);
-    friend bool operator<=(const Blob &, const Blob &);
-    friend bool operator>=(const Blob &, const Blob &);
+    friend bool operator<=<T>(const Blob &, const Blob &);
+    friend bool operator>=<T>(const Blob &, const Blob &);
 
 public:
     typedef T value_type;
@@ -51,15 +51,20 @@ public:
     bool empty() const { return data->empty(); }
     void push_back(const T &t) { data->push_back(t); }
     void push_back(T &&t) { data->push_back(std::move(t)); }
+    void push_back(const T &t) const { data->push_back(t); }
+    void push_back(T &&t) const { data->push_back(std::move(t)); }
     void pop_back();
+    void pop_back() const;
     T &front();
     T &back();
     const T &front() const;
     const T &back() const;
     T &operator[](size_type i);
     const T &operator[](size_type i) const;
-    BlobPtr<T> begin();
-    BlobPtr<T> end();
+    BlobPtr<T> begin() { return BlobPtr<T>(*this); }
+    const BlobPtr<T> cbegin() const { return BlobPtr<T>(*this); }
+    BlobPtr<T> end() { return BlobPtr<T>(*this, size()); }
+    const BlobPtr<T> cend() const { return BlobPtr<T>(*this, size()); }
 
 private:
     std::shared_ptr<std::vector<T>> data;
@@ -87,6 +92,13 @@ void Blob<T>::pop_back()
 }
 
 template <typename T>
+void Blob<T>::pop_back() const
+{
+    check(0, "called pop_back on empty Blob");
+    data->pop_back();
+}
+
+template <typename T>
 T &Blob<T>::front()
 {
     check(0, "called front on empty Blob");
@@ -105,6 +117,13 @@ const T &Blob<T>::front() const
 {
     check(0, "called front on empty Blob");
     return data->front();
+}
+
+template <typename T>
+const T &Blob<T>::back() const
+{
+    check(0, "called back on empty Blob");
+    return data->back();
 }
 
 template <typename T>
@@ -134,12 +153,12 @@ bool operator!=(const Blob<T> &lhs, const Blob<T> &rhs)
     return !(lhs == rhs);
 }
 template <typename T>
-bool operator>(const Blob<T> &lhs, const Blob<T> &rhs)
+bool operator<(const Blob<T> &lhs, const Blob<T> &rhs)
 {
     return (*lhs.data < *rhs.data);
 }
 template <typename T>
-bool operator<(const Blob<T> &lhs, const Blob<T> &rhs)
+bool operator>(const Blob<T> &lhs, const Blob<T> &rhs)
 {
     return rhs < lhs;
 }

@@ -1,0 +1,3 @@
+Question: Explain which kind of friendship you chose for the equality and relational operators for BlobPtr.
+
+Answer: One to One as BlobPtr's instantiated with different types shouldn't be able to be compared to each other.

@@ -5,6 +5,16 @@
 
 template <typename T>
 bool operator==(const BlobPtr<T> &, const BlobPtr<T> &);
+template <typename T>
+bool operator!=(const BlobPtr<T> &, const BlobPtr<T> &);
+template <typename T>
+bool operator<(const BlobPtr<T> &, const BlobPtr<T> &);
+template <typename T>
+bool operator>(const BlobPtr<T> &, const BlobPtr<T> &);
+template <typename T>
+bool operator<=(const BlobPtr<T> &, const BlobPtr<T> &);
+template <typename T>
+bool operator>=(const BlobPtr<T> &, const BlobPtr<T> &);
 
 template <typename T>
 class BlobPtr
@@ -51,7 +61,7 @@ BlobPtr<T>::BlobPtr(Blob<T> &a, std::size_t sz) : wptr(a.data), curr(sz) {}
 template <typename T>
 std::shared_ptr<std::vector<T>> BlobPtr<T>::check(std::size_t i, const std::string &msg) const
 {
-    auto ret = wptr.lcok();
+    auto ret = wptr.lock();
     if (!ret)
     {
         throw std::runtime_error("Unbound BlobPtr");
