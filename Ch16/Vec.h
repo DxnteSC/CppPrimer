@@ -200,7 +200,7 @@ Vec<T> &Vec<T>::operator=(Vec &&rhs) noexcept
 }
 
 template <typename T>
-bool operator==(const Vec<T> lhs, Vec<T> rhs)
+bool operator==(const Vec<T> &lhs, Vec<T> &rhs)
 {
     if (lhs.size() != rhs.size())
         return false;
@@ -213,31 +213,31 @@ bool operator==(const Vec<T> lhs, Vec<T> rhs)
 }
 
 template <typename T>
-bool operator!=(const Vec<T> lhs, Vec<T> rhs)
+bool operator!=(const Vec<T> &lhs, Vec<T> &rhs)
 {
     return !(lhs == rhs);
 }
 
 template <typename T>
-bool operator<(const Vec<T> lhs, Vec<T> rhs)
+bool operator<(const Vec<T> &lhs, Vec<T> &rhs)
 {
     return lhs.size() < rhs.size();
 }
 
 template <typename T>
-bool operator>(const Vec<T> lhs, Vec<T> rhs)
+bool operator>(const Vec<T> &lhs, Vec<T> &rhs)
 {
     return rhs < lhs;
 }
 
 template <typename T>
-bool operator<=(const Vec<T> lhs, Vec<T> rhs)
+bool operator<=(const Vec<T> &lhs, Vec<T> &rhs)
 {
     return !(lhs > rhs);
 }
 
 template <typename T>
-bool operator>=(const Vec<T> lhs, Vec<T> rhs)
+bool operator>=(const Vec<T> &lhs, Vec<T> &rhs)
 {
     return !(lhs < rhs);
 }

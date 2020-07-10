@@ -1,0 +1,3 @@
+Question: What, if any, are the differences between a type parameter that is declared as a typename and one that is declared as a class? When must typename be used?
+
+Answer: There are no differences in a declarion. Typename must be used with :: when accessing type members to make sure the compiler knows that a type is being used instead of a static variable.
